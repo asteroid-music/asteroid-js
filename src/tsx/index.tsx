@@ -1,7 +1,73 @@
+//Basic imports
 import React from 'react';
 import ReactDOM from 'react-dom';
 import axios from 'axios'
+import { isMobileOnly, isTablet } from 'react-device-detect'
 
+//Local .tsx imports
+
+//Local .ts imports
+import { BrowserMode } from '../ts/browser-mode-type'
+
+//Local .json imports
+//import * as tabs from ../json/tabs.json
+
+/**
+ * Interface describing named tab, along with strings representing all the subtabs it contains
+ */
+interface TabObject {
+    /** The name of the tab */
+    name: string;
+    /** A string array containing names of subtabs */
+    subtabs: string[];
+}
+
+/**
+ * Utility interface describing props for the main React <App>
+ */
+interface AppProps {
+    /** An array of TabObject-type objects representing the accessible tabs */
+    tabs: TabObject[];
+    /**
+     * If necessary, the name of the tab that the app should open on.
+     * Will be ignored if it doesn't match the name of a tab in 'tabs'
+     */
+    currTab?: string;
+    /**
+     * If necessary, the name of the subtab that the app should open on.
+     * Will be ignored either if 'currTab' is not provided / is invalid,
+     * or if 'currTab' is valid but 'currSubTab' does not match a subtab of
+     * the current tab in 'tabs'
+     */
+    currSubTab?: string; 
+}
+
+/**
+ * Utility interface describing state for the main React <App>
+ */
+interface AppState {
+    /** An array of TabObject-type objects representing the accessible tabs */
+    tabs: TabObject[];
+    /**
+     * Calculated with 'react-device-detect'; whether the site is running on
+     * a mobile device ('mobile'), a tablet ('tablet') or a browser in some
+     * other device e.g PC ('browser')
+     */
+    browserMode: BrowserMode;
+    /** The name of the currently open app tab, or 'null' if no open tab. */
+    currTab: string | null;
+    /** The name of the currently open app subtab, or 'none' if no open tab. */
+    currSubTab: string | null; 
+    /** Temporary variable: will be removed later in dev; body text */
+    gotText: string;
+}
+
+/**
+ * Button class for testing axios requests.
+ * Renders a button of class "get-request-button", which on click calls the
+ * callback 'this.props.onClick' with closure.
+ * Will be removed in later development
+ */
 class GetRequestButton extends React.Component<{onClick: () => void}> {
     render() {
         return (
@@ -15,17 +81,31 @@ class GetRequestButton extends React.Component<{onClick: () => void}> {
     }
 }
 
-class App extends React.Component<{},{gotText: string}> {
+class App extends React.Component<AppProps,AppState> {
     constructor(props) {
         super(props);
 
+        //State BrowserMode
+        let browserMode: BrowserMode;
+        if (isMobileOnly) {
+            browserMode = "mobile";
+        } else if (isTablet) {
+            browserMode = "tablet";
+        } else {
+            browserMode = "browser";
+        }
+
         this.state = {
-            gotText: "No text! Press button to get..."
+            tabs: this.props.tabs,
+            browserMode: browserMode,
+            currTab: null,
+            currSubTab: null,
+            gotText: "No text! Press button to get...",
         }
     }
 
     onClick() {
-        axios.get("http://localhost:8080/songs").then(
+        axios.get("http://localhost:8000/songs").then(
             response => {
                 this.setState({gotText:response.data.name});
             }
@@ -49,6 +129,6 @@ class App extends React.Component<{},{gotText: string}> {
 }
 
 ReactDOM.render(
-  <App/>,
+  <App tabs={[]}/>,
   document.getElementById('root')
 );
