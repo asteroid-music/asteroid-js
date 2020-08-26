@@ -25,7 +25,7 @@ class App extends React.Component<{},{gotText: string}> {
     }
 
     onClick() {
-        axios.get("http://localhost:5000/").then(
+        axios.get("http://localhost:8080/songs").then(
             response => {
                 this.setState({gotText:response.data.name});
             }
