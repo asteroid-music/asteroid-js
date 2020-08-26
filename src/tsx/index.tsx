@@ -8,26 +8,17 @@ import { isMobileOnly, isTablet } from 'react-device-detect'
 
 //Local .ts imports
 import { BrowserMode } from '../ts/browser-mode-type'
+import { TabObjectLike, TabObject, TabArray } from '../ts/tabs'
 
 //Local .json imports
-//import * as tabs from ../json/tabs.json
-
-/**
- * Interface describing named tab, along with strings representing all the subtabs it contains
- */
-interface TabObject {
-    /** The name of the tab */
-    name: string;
-    /** A string array containing names of subtabs */
-    subtabs: string[];
-}
+const tabs = new TabArray(require('../json/tabs.json'));
 
 /**
  * Utility interface describing props for the main React <App>
  */
 interface AppProps {
-    /** An array of TabObject-type objects representing the accessible tabs */
-    tabs: TabObject[];
+    /** A TabArray object representing the accessible tabs */
+    tabs: TabArray;
     /**
      * If necessary, the name of the tab that the app should open on.
      * Will be ignored if it doesn't match the name of a tab in 'tabs'
@@ -39,15 +30,15 @@ interface AppProps {
      * or if 'currTab' is valid but 'currSubTab' does not match a subtab of
      * the current tab in 'tabs'
      */
-    currSubTab?: string; 
+    currSubTab?: string;
 }
 
 /**
  * Utility interface describing state for the main React <App>
  */
 interface AppState {
-    /** An array of TabObject-type objects representing the accessible tabs */
-    tabs: TabObject[];
+    /** A TabArray representing the accessible tabs */
+    tabs: TabArray;
     /**
      * Calculated with 'react-device-detect'; whether the site is running on
      * a mobile device ('mobile'), a tablet ('tablet') or a browser in some
@@ -57,7 +48,7 @@ interface AppState {
     /** The name of the currently open app tab, or 'null' if no open tab. */
     currTab: string | null;
     /** The name of the currently open app subtab, or 'none' if no open tab. */
-    currSubTab: string | null; 
+    currSubTab: string | null;
     /** Temporary variable: will be removed later in dev; body text */
     gotText: string;
 }
@@ -81,6 +72,9 @@ class GetRequestButton extends React.Component<{onClick: () => void}> {
     }
 }
 
+/**
+ * Basic <App> component for Asteroid frontend
+ */
 class App extends React.Component<AppProps,AppState> {
     constructor(props) {
         super(props);
@@ -93,6 +87,20 @@ class App extends React.Component<AppProps,AppState> {
             browserMode = "tablet";
         } else {
             browserMode = "browser";
+        }
+
+        //Check currTab
+        let currTab: string | null = null;
+        if (this.props.currTab && this.props.tabs.includes(this.props.currTab)) {
+            currTab = this.props.currTab;
+        }
+
+        //Check currSubTab
+        let currSubTab: string | null = null;
+        if (currTab && this.props.tabs.tabs[currTab].includes(
+            this.props.currSubTab
+        )) {
+            currSubTab = this.props.currSubTab;
         }
 
         this.state = {
@@ -129,6 +137,6 @@ class App extends React.Component<AppProps,AppState> {
 }
 
 ReactDOM.render(
-  <App tabs={[]}/>,
+  <App tabs={tabs}/>,
   document.getElementById('root')
 );

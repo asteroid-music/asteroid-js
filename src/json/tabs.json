@@ -1,0 +1,14 @@
+[
+    {
+        "name": "Voting",
+        "subtabs": ["Queue", "Recently Requested", "Downloaded", "Favourites"]
+    },
+    {
+        "name": "Settings",
+        "subtabs": ["Account","Tabs"]
+    },
+    {
+        "name": "About",
+        "subtabs": ["Credits","Cookie Policy"]
+    }
+]
