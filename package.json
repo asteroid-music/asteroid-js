@@ -1,7 +1,7 @@
 {
-  "name": "babel-tests",
+  "name": "asteroid-js",
   "version": "1.0.0",
-  "description": "Messing round with React and TS",
+  "description": "Asteroid frontend written predominantly in TypeScript with React",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
