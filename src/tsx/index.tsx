@@ -3,6 +3,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import axios from 'axios'
 import { isMobileOnly, isTablet } from 'react-device-detect'
+import { Button, Container, Typography } from '@material-ui/core'
 
 //Local .tsx imports
 
@@ -62,12 +63,12 @@ interface AppState {
 class GetRequestButton extends React.Component<{onClick: () => void}> {
     render() {
         return (
-            <button
+            <Button
                 className="get-request-button"
                 onClick={() => {this.props.onClick()}}
             >
             Click here for get request!
-            </button>
+            </Button>
         )
     }
 }
@@ -128,10 +129,10 @@ class App extends React.Component<AppProps,AppState> {
 
     render() {
         return (
-            <div>
+            <Container>
                 <GetRequestButton onClick={() => {this.onClick()}}/>
-                {this.state.gotText}
-            </div>
+                <Typography variant="body1">{this.state.gotText}</Typography>
+            </Container>
         );
     }
 }
