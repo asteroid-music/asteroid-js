@@ -5,7 +5,7 @@ import { isMobileOnly, isTablet } from 'react-device-detect'
 import { Button, Container, Typography } from '@material-ui/core'
 
 //Local .tsx imports
-//import { AsteroidTabs } from './tabs'
+import { AsteroidTabsProps, AsteroidTabs } from './tabs'
 
 //Local .ts imports
 import { BrowserMode } from '../ts/browser-mode-type'
@@ -126,6 +126,11 @@ class App extends React.Component<AppProps,AppState> {
 
         return (
             <Container>
+                <AsteroidTabs
+                    tabNames={this.props.tabs.nameList()}
+                    browserMode={this.state.browserMode}
+                    currTab={currTab}
+                 />
                 <GetRequestButton onClick={() => {this.onClick()}}/>
                 <Typography variant="body1">{this.state.gotText}</Typography>
             </Container>
