@@ -1,4 +1,3 @@
-
 const HTMLWebpackPlugin = require('html-webpack-plugin')
 
 const WebpackConfig = {
@@ -13,13 +12,13 @@ const WebpackConfig = {
         rules: [
             {
                 test: /\.(tsx?)$/,
-                exclude: /node_modules/,
+                exclude: [/node_modules/, /test/],
                 use: [
                     'babel-loader',
                     'ts-loader'
                 ]
             }
-        ]
+        ]   
     },
     resolve: {
         extensions: ['.ts', '.tsx', '.js']
