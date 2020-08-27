@@ -6,6 +6,7 @@ import { isMobileOnly, isTablet } from 'react-device-detect'
 import { Button, Container, Typography } from '@material-ui/core'
 
 //Local .tsx imports
+//import { AsteroidTabs } from './tabs'
 
 //Local .ts imports
 import { BrowserMode } from '../ts/browser-mode-type'
@@ -38,8 +39,6 @@ interface AppProps {
  * Utility interface describing state for the main React <App>
  */
 interface AppState {
-    /** A TabArray representing the accessible tabs */
-    tabs: TabArray;
     /**
      * Calculated with 'react-device-detect'; whether the site is running on
      * a mobile device ('mobile'), a tablet ('tablet') or a browser in some
@@ -105,7 +104,6 @@ class App extends React.Component<AppProps,AppState> {
         }
 
         this.state = {
-            tabs: this.props.tabs,
             browserMode: browserMode,
             currTab: null,
             currSubTab: null,
@@ -128,6 +126,9 @@ class App extends React.Component<AppProps,AppState> {
     }
 
     render() {
+        const currTab = this.state.currTab;
+        let tabnames: string[] = this.props.tabs.nameList();
+
         return (
             <Container>
                 <GetRequestButton onClick={() => {this.onClick()}}/>
