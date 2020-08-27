@@ -1,7 +1,7 @@
 const HTMLWebpackPlugin = require('html-webpack-plugin')
 
 const WebpackConfig = {
-    entry: "./src/tsx/index.tsx",
+    entry: "./src/ts/index.ts",
     plugins: [
         new HTMLWebpackPlugin({
             template: "src/html/index.html",
@@ -18,7 +18,7 @@ const WebpackConfig = {
                     'ts-loader'
                 ]
             }
-        ]   
+        ]
     },
     resolve: {
         extensions: ['.ts', '.tsx', '.js']

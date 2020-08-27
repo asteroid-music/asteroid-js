@@ -1,6 +1,5 @@
 //Basic imports
 import React from 'react';
-import ReactDOM from 'react-dom';
 import axios from 'axios'
 import { isMobileOnly, isTablet } from 'react-device-detect'
 import { Button, Container, Typography } from '@material-ui/core'
@@ -10,10 +9,7 @@ import { Button, Container, Typography } from '@material-ui/core'
 
 //Local .ts imports
 import { BrowserMode } from '../ts/browser-mode-type'
-import { TabObjectLike, TabObject, TabArray } from '../ts/tabs'
-
-//Local .json imports
-const tabs = new TabArray(require('../json/tabs.json'));
+import { TabArray } from '../ts/tabs'
 
 /**
  * Utility interface describing props for the main React <App>
@@ -127,7 +123,6 @@ class App extends React.Component<AppProps,AppState> {
 
     render() {
         const currTab = this.state.currTab;
-        let tabnames: string[] = this.props.tabs.nameList();
 
         return (
             <Container>
@@ -138,7 +133,4 @@ class App extends React.Component<AppProps,AppState> {
     }
 }
 
-ReactDOM.render(
-  <App tabs={tabs}/>,
-  document.getElementById('root')
-);
+export { App, AppProps }
