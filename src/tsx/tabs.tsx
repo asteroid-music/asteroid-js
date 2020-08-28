@@ -1,5 +1,5 @@
 import React from 'react';
-import { Tabs, AppBar, Tab } from '@material-ui/core'
+import { Tabs, AppBar, Tab, Paper } from '@material-ui/core'
 
 /**
  * Props for AsteroidTabs react element
@@ -14,6 +14,9 @@ interface AsteroidTabsProps {
     /** Currently selected tab, if relevant */
     currTab?: string,
 
+    /** Currently selected subtab, if relevant */
+    currSubTab?: string,
+
     /**
      * Callback function for the tab bar's onChange attribute
      *
@@ -22,17 +25,13 @@ interface AsteroidTabsProps {
      */
     tabCallback: (event: object, tabName: string) => void,
 
-
     /**
-     * Function that returns the callback for the subtab button of name
-     * subTabName
+     * Callback function for the subtab bar's onChange attribute
      *
-     * @param {string} subTabName: the name of the subtab to return a
-     * callback for
-     *
-     * @returns {() => void}: the callback for the subtab button
+     * @param {object} event: the onChange event
+     * @param {string} subTabName: the name of the subtab that is clicked
      */
-//    subTabCallbackGenerator: (tabName: string) => () => void,
+    subTabCallback: (event: object, subTabName: string) => void,
 }
 
 /**
@@ -41,7 +40,10 @@ interface AsteroidTabsProps {
 class AsteroidTabs extends React.Component<AsteroidTabsProps> {
 
     mainBar() {
-        return <Tabs value={this.props.currTab || false} onChange={(event: object, value: string) => {this.props.tabCallback(event,value);}}>
+        return <Tabs
+            value={this.props.currTab || false}
+            onChange={(event: object, value: string) => {this.props.tabCallback(event,value);}}
+        >
             {this.props.tabNames.map((tabName: string) => {
                 return <Tab key={tabName} value={tabName} label={tabName} />
             })}
@@ -49,6 +51,18 @@ class AsteroidTabs extends React.Component<AsteroidTabsProps> {
     }
 
     subBar() {
+        if (this.props.subTabNames) {
+            return <Paper><Tabs
+                value={this.props.currSubTab || false}
+                onChange={(event: object, value: string) => {this.props.subTabCallback(event,value);}}
+            >
+                {this.props.subTabNames.map((subTabName: string) => {
+                    return <Tab key={subTabName} value={subTabName} label={subTabName} />
+                })}
+            </Tabs></Paper>
+        } else {
+            return null;
+        }
     }
 
     render() {

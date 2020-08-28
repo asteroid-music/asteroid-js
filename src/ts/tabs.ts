@@ -80,6 +80,22 @@ class TabArray {
     includes(tab:string) {
         return this.nameList().includes(tab);
     }
+
+    /**
+     * Returns the tab specified by the given tabname, or 'null' if none exists
+     *
+     * @param {string} tab: the name of the tab to get
+     *
+     * @returns {TabObject | null} tab: the specified tab if exists; 'null' otherwise
+     */
+    get(tab:string) {
+        let objIndex: number = this.nameList().indexOf(tab);
+        if (objIndex === -1) {
+            return null;
+        } else {
+            return this.tabs[objIndex];
+        }
+    }
 }
 
 export { TabObjectLike, TabObject, TabArray }
