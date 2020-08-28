@@ -106,7 +106,7 @@ class App extends React.Component<AppProps,AppState> {
                 + this.props.tabs.get(viewedTab).getLoc(subTabName)
             ).then(
                 response => {
-                    this.setState({gotText:response.data.name});
+                    this.setState({gotText:JSON.stringify(response.data,null,2)});
                 }
             ).catch(
                 error => {
