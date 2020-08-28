@@ -36,6 +36,9 @@ interface AppState {
     /** The name of the currently open app tab, or 'null' if no open tab. */
     currTab: string | null;
 
+    /** The name of the currently viewed tab in the tab bar, or 'null' if no viewed tab. */
+    viewedTab: string | null;
+
     /** The name of the currently open app subtab, or 'none' if no open tab. */
     currSubTab: string | null;
 
@@ -72,6 +75,7 @@ class App extends React.Component<AppProps,AppState> {
 
         this.state = {
             currTab: currTab,
+            viewedTab: currTab,
             currSubTab: currSubTab,
             showSubTabBar: showSubTabBar,
             gotText: "No text! Open a subtab to get...",
@@ -82,21 +86,21 @@ class App extends React.Component<AppProps,AppState> {
      * Callback for the onChange event of the subtab bar
      * If the clicked subtab is the current subtab, deselects it
      * If there is no active tab, throws up a warning
-     * If it is a valid subtab of the current tab, calls a get request
+     * If it is a valid subtab of the current tab, switches to that tab and subtab
      * If it is an invalid subtab of the current tab, throws up a warning
      *
      * @param {object} event: the onChange event triggered by the subtab bar
      * @param {string} subTabName: the name of the chosen subtab
      */
     subTabChangeCallback(event: object, subTabName: string) {
-        const currTab = this.state.currTab;
+        const viewedTab: string = this.state.viewedTab;
 
         if (subTabName === this.state.currSubTab) {
             this.setState({currSubTab:null});
-        } else if (currTab === null) {
-            console.warn("App.subTabChangeCallback called with no open tab")
-        } else if (this.props.tabs.get(currTab)?.includes(subTabName)) {
-            this.setState({currSubTab:subTabName})
+        } else if (viewedTab === null) {
+            console.warn("App.subTabChangeCallback called with no viewed tab")
+        } else if (this.props.tabs.get(viewedTab)?.includes(subTabName)) {
+            this.setState({currTab: viewedTab, currSubTab:subTabName})
             axios.get("http://localhost:8000/songs").then(
                 response => {
                     this.setState({gotText:response.data.name});
@@ -112,26 +116,26 @@ class App extends React.Component<AppProps,AppState> {
             console.warn(
                 "App.subTabChangeCallback called with invalid subtab "
                 + subTabName
-                + " for currently open tab "
-                + currTab
+                + " for currently viewed tab "
+                + viewedTab
             );
         }
     }
 
     /**
      * Callback for the onChange event of the tab bar
-     * If the clicked tab is the current tab, toggles hiding/showing the subtab bar
-     * If the tab is another valid tab, switches to it and shows the subtab bar
+     * If the clicked tab is the viewed tab, toggles hiding/showing the subtab bar
+     * If the tab is another valid tab, switches the subtab bar to it
      * If it is an invalid tab, throws up a warning
      *
      * @param {object} event: the onChange event triggered by the subtab bar
      * @param {string} tabName: the name of the chosen tab
      */
     tabChangeCallback(event: object, tabName: string) {
-        if (tabName === this.state.currTab) {
+        if (tabName === this.state.viewedTab) {
             this.setState({showSubTabBar:!this.state.showSubTabBar});
         } else if (this.props.tabs.includes(tabName)) {
-            this.setState({currTab:tabName, currSubTab:null, showSubTabBar:true});
+            this.setState({viewedTab:tabName, showSubTabBar:true});
         } else {
             console.warn(
                 "App.tabChangeCallback called with invalid tab "
@@ -141,14 +145,15 @@ class App extends React.Component<AppProps,AppState> {
     }
 
     render() {
-        const currTab = this.state.currTab;
-        const currSubTab = this.state.currSubTab;
-        const gotText = this.state.gotText;
-        const showSubTabBar = this.state.showSubTabBar;
+        const currTab: string = this.state.currTab;
+        const viewedTab: string = this.state.viewedTab;
+        const currSubTab: string = currTab == viewedTab ? this.state.currSubTab : null;
+        const gotText: string = this.state.gotText;
+        const showSubTabBar: boolean = this.state.showSubTabBar;
 
         let subTabNames: string[] | null = null;
-        if (currTab && showSubTabBar) {
-            subTabNames = this.props.tabs.get(currTab)?.subtabs;
+        if (viewedTab && showSubTabBar) {
+            subTabNames = this.props.tabs.get(viewedTab)?.subtabs;
         }
 
         return (
