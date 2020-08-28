@@ -96,6 +96,7 @@ class App extends React.Component<AppProps,AppState> {
         } else if (currTab === null) {
             console.warn("App.subTabChangeCallback called with no open tab")
         } else if (this.props.tabs.get(currTab)?.includes(subTabName)) {
+            this.setState({currSubTab:subTabName})
             axios.get("http://localhost:8000/songs").then(
                 response => {
                     this.setState({gotText:response.data.name});
@@ -141,6 +142,7 @@ class App extends React.Component<AppProps,AppState> {
 
     render() {
         const currTab = this.state.currTab;
+        const currSubTab = this.state.currSubTab;
         const gotText = this.state.gotText;
         const showSubTabBar = this.state.showSubTabBar;
 
@@ -155,6 +157,7 @@ class App extends React.Component<AppProps,AppState> {
                     tabNames={this.props.tabs.nameList()}
                     currTab={currTab}
                     subTabNames={subTabNames}
+                    currSubTab={currSubTab}
                     tabCallback={(event: object, tabName: string) => {this.tabChangeCallback(event,tabName)}}
                     subTabCallback={(event: object, subTabName: string) => {this.subTabChangeCallback(event,subTabName)}}
                  />

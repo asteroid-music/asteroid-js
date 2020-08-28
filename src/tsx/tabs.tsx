@@ -55,6 +55,7 @@ class AsteroidTabs extends React.Component<AsteroidTabsProps> {
             return <Paper><Tabs
                 value={this.props.currSubTab || false}
                 onChange={(event: object, value: string) => {this.props.subTabCallback(event,value);}}
+                indicatorColor="secondary"
             >
                 {this.props.subTabNames.map((subTabName: string) => {
                     return <Tab key={subTabName} value={subTabName} label={subTabName} />
