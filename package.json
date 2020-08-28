@@ -31,13 +31,18 @@
     "@material-ui/core": "^4.11.0",
     "axios": "^0.20.0",
     "react": "^16.13.1",
-    "react-device-detect": "^1.13.1",
     "react-dom": "^16.13.1"
   },
   "jest": {
-    "moduleFileExtensions": ["js", "jsx", "tsx", "ts"],
-    "moduleDirectories": ["node_modules"],
-
+    "moduleFileExtensions": [
+      "js",
+      "jsx",
+      "tsx",
+      "ts"
+    ],
+    "moduleDirectories": [
+      "node_modules"
+    ],
     "moduleNameMapper": {
       "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
       "\\.(css|less)$": "identity-obj-proxy"

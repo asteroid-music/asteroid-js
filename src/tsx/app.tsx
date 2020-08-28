@@ -1,14 +1,12 @@
 //Basic imports
 import React from 'react';
 import axios from 'axios'
-import { isMobileOnly, isTablet } from 'react-device-detect'
 import { Button, Container, Typography } from '@material-ui/core'
 
 //Local .tsx imports
 import { AsteroidTabsProps, AsteroidTabs } from './tabs'
 
 //Local .ts imports
-import { BrowserMode } from '../ts/browser-mode-type'
 import { TabArray } from '../ts/tabs'
 
 /**
@@ -35,12 +33,6 @@ interface AppProps {
  * Utility interface describing state for the main React <App>
  */
 interface AppState {
-    /**
-     * Calculated with 'react-device-detect'; whether the site is running on
-     * a mobile device ('mobile'), a tablet ('tablet') or a browser in some
-     * other device e.g PC ('browser')
-     */
-    browserMode: BrowserMode;
     /** The name of the currently open app tab, or 'null' if no open tab. */
     currTab: string | null;
     /** The name of the currently open app subtab, or 'none' if no open tab. */
@@ -75,16 +67,6 @@ class App extends React.Component<AppProps,AppState> {
     constructor(props) {
         super(props);
 
-        //State BrowserMode
-        let browserMode: BrowserMode;
-        if (isMobileOnly) {
-            browserMode = "mobile";
-        } else if (isTablet) {
-            browserMode = "tablet";
-        } else {
-            browserMode = "browser";
-        }
-
         //Check currTab
         let currTab: string | null = null;
         if (this.props.currTab && this.props.tabs.includes(this.props.currTab)) {
@@ -100,7 +82,6 @@ class App extends React.Component<AppProps,AppState> {
         }
 
         this.state = {
-            browserMode: browserMode,
             currTab: null,
             currSubTab: null,
             gotText: "No text! Press button to get...",
@@ -141,7 +122,6 @@ class App extends React.Component<AppProps,AppState> {
             <Container>
                 <AsteroidTabs
                     tabNames={this.props.tabs.nameList()}
-                    browserMode={this.state.browserMode}
                     currTab={currTab}
                     tabCallback={(event: object, tabName: string) => {this.tabChangeCallback(event,tabName)}}
                  />

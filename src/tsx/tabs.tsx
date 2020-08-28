@@ -1,5 +1,4 @@
 import React from 'react';
-import { BrowserMode } from '../ts/browser-mode-type'
 import { Tabs, AppBar, Tab } from '@material-ui/core'
 
 /**
@@ -11,12 +10,6 @@ interface AsteroidTabsProps {
 
     /** List of subtab names to generate buttons for */
     subTabNames?: string[],
-
-    /**
-     * Whether the site is running on a mobile device ('mobile'), a tablet
-     * ('tablet') or some other device e.g PC ('browser').
-     */
-    browserMode: BrowserMode,
 
     /** Currently selected tab, if relevant */
     currTab?: string,
@@ -62,7 +55,7 @@ class AsteroidTabs extends React.Component<AsteroidTabsProps> {
         return (
             <AppBar position="static">
                 {this.mainBar()}
-                {this.props.browserMode !== "browser" && this.subBar()}
+                {this.subBar()}
             </AppBar>
         );
     }
