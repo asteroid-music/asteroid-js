@@ -121,6 +121,19 @@ class App extends React.Component<AppProps,AppState> {
         );
     }
 
+    tabChangeCallback(event: object, tabName: string) {
+        if (tabName == this.props.currTab) {
+            this.setState({currTab:tabName, })
+        } else if (this.props.tabs.includes(tabName)) {
+            this.setState({currTab:tabName, currSubTab:null})
+        } else {
+            console.warn(
+                "App.tabChangeCallback called with invalid tab"
+                + tabName
+            )
+        }
+    }
+
     render() {
         const currTab = this.state.currTab;
 
@@ -130,6 +143,7 @@ class App extends React.Component<AppProps,AppState> {
                     tabNames={this.props.tabs.nameList()}
                     browserMode={this.state.browserMode}
                     currTab={currTab}
+                    tabCallback={(event: object, tabName: string) => {this.tabChangeCallback(event,tabName)}}
                  />
                 <GetRequestButton onClick={() => {this.onClick()}}/>
                 <Typography variant="body1">{this.state.gotText}</Typography>

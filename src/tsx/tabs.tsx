@@ -22,13 +22,12 @@ interface AsteroidTabsProps {
     currTab?: string,
 
     /**
-     * Function that returns the callback for the tab button of name tabName
+     * Callback function for the tab bar's onChange attribute
      *
-     * @param {string} tabName: the name of the tab to return a callback for
-     *
-     * @returns {() => void}: the callback for the tab button
+     * @param {object} event: the onChange event
+     * @param {string} tabName: the name of the tab that is clicked
      */
-//    tabCallbackGenerator: (tabName: string) => () => void,
+    tabCallback: (event: object, tabName: string) => void,
 
 
     /**
@@ -49,7 +48,7 @@ interface AsteroidTabsProps {
 class AsteroidTabs extends React.Component<AsteroidTabsProps> {
 
     mainBar() {
-        return <Tabs value={this.props.currTab || false}>
+        return <Tabs value={this.props.currTab || false} onChange={(event: object, value: string) => {this.props.tabCallback(event,value);}}>
             {this.props.tabNames.map((tabName: string) => {
                 return <Tab key={tabName} value={tabName} label={tabName} />
             })}
