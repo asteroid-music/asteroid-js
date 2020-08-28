@@ -1,7 +1,7 @@
 //Basic imports
 import React from 'react';
 import axios from 'axios'
-import { Button, Container, Typography } from '@material-ui/core'
+import { Container, Typography } from '@material-ui/core'
 
 //Local .tsx imports
 import { AsteroidTabsProps, AsteroidTabs } from './tabs'
