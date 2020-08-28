@@ -101,7 +101,10 @@ class App extends React.Component<AppProps,AppState> {
             console.warn("App.subTabChangeCallback called with no viewed tab")
         } else if (this.props.tabs.get(viewedTab)?.includes(subTabName)) {
             this.setState({currTab: viewedTab, currSubTab:subTabName})
-            axios.get("http://localhost:8000/songs").then(
+            axios.get(
+                "http://localhost:8000"
+                + this.props.tabs.get(viewedTab).getLoc(subTabName)
+            ).then(
                 response => {
                     this.setState({gotText:response.data.name});
                 }

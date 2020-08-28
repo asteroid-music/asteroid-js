@@ -1,14 +1,17 @@
 [
     {
         "name": "Voting",
-        "subtabs": ["Queue", "Recently Requested", "Downloaded", "Favourites"]
+        "subtabs": ["Queue", "Recently Requested", "Downloaded", "Favourites"],
+        "getlocs": ["/queue","/music/songs","/music/songs","/music/songs"]
     },
     {
         "name": "Settings",
-        "subtabs": ["Account","Tabs"]
+        "subtabs": ["Account","Tabs"],
+        "getlocs": ["/","/"]
     },
     {
         "name": "About",
-        "subtabs": ["Credits","Cookie Policy"]
+        "subtabs": ["Credits","Cookie Policy"],
+        "getlocs": ["/","/"]
     }
 ]
