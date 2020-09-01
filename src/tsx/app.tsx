@@ -1,10 +1,10 @@
 //Basic imports
 import React from 'react';
-import axios from 'axios'
-import { Container, Typography } from '@material-ui/core'
+import { Container } from '@material-ui/core'
 
 //Local .tsx imports
 import { AsteroidTabsProps, AsteroidTabs } from './tabs'
+import { AsteroidBody } from './body'
 
 //Local .ts imports
 import { TabArray } from '../ts/tabs'
@@ -44,9 +44,6 @@ interface AppState {
 
     /** Whether or not the subtab bar should be open */
     showSubTabBar: boolean;
-
-    /** Temporary variable: will be removed later in dev; body text */
-    gotText: string;
 }
 
 /**
@@ -78,7 +75,6 @@ class App extends React.Component<AppProps,AppState> {
             viewedTab: currTab,
             currSubTab: currSubTab,
             showSubTabBar: showSubTabBar,
-            gotText: "No text! Open a subtab to get...",
         }
     }
 
@@ -100,21 +96,7 @@ class App extends React.Component<AppProps,AppState> {
         } else if (viewedTab === null) {
             console.warn("App.subTabChangeCallback called with no viewed tab")
         } else if (this.props.tabs.get(viewedTab)?.includes(subTabName)) {
-            this.setState({currTab: viewedTab, currSubTab:subTabName})
-            axios.get(
-                "http://localhost:8000"
-                + this.props.tabs.get(viewedTab).getLoc(subTabName)
-            ).then(
-                response => {
-                    this.setState({gotText:JSON.stringify(response.data,null,2)});
-                }
-            ).catch(
-                error => {
-                    let errorcode: string = "Error raised calling get request: code ";
-                    errorcode += error.response?.status.toString();
-                    this.setState({gotText:errorcode});
-                }
-            );
+            this.setState({currTab: viewedTab, currSubTab:subTabName});
         } else {
             console.warn(
                 "App.subTabChangeCallback called with invalid subtab "
@@ -151,7 +133,6 @@ class App extends React.Component<AppProps,AppState> {
         const currTab: string = this.state.currTab;
         const viewedTab: string = this.state.viewedTab;
         const currSubTab: string = currTab == viewedTab ? this.state.currSubTab : null;
-        const gotText: string = this.state.gotText;
         const showSubTabBar: boolean = this.state.showSubTabBar;
 
         let subTabNames: string[] | null = null;
@@ -169,7 +150,9 @@ class App extends React.Component<AppProps,AppState> {
                     tabCallback={(event: object, tabName: string) => {this.tabChangeCallback(event,tabName)}}
                     subTabCallback={(event: object, subTabName: string) => {this.subTabChangeCallback(event,subTabName)}}
                  />
-                <Typography variant="body1">{gotText}</Typography>
+                <AsteroidBody
+                    subTabName={currSubTab}
+                />
             </Container>
         );
     }

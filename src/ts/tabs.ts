@@ -7,12 +7,6 @@ interface TabObjectLike {
 
     /** A string array containing names of subtabs */
     subtabs: string[];
-
-    /**
-     * A string array containing GET locations for these subtabs
-     * Temporary (for testing), this behaviour will be changed later in development
-     */
-    getlocs: string[];
 }
 
 /**
@@ -26,12 +20,6 @@ class TabObject {
     subtabs: string[];
 
     /**
-     * A string array containing GET locations for these subtabs
-     * Temporary (for testing), this behaviour will be changed later in development
-     */
-    getlocs: string[];
-
-    /**
      * Constructor method
      *
      * @param {object} rawJson: a raw json representing the object
@@ -39,7 +27,6 @@ class TabObject {
     constructor(rawJson: TabObjectLike) {
         this.name = rawJson.name;
         this.subtabs = rawJson.subtabs;
-        this.getlocs = rawJson.getlocs;
     }
 
     /**
@@ -51,23 +38,6 @@ class TabObject {
      */
     includes(subtab:string) {
         return this.subtabs.includes(subtab);
-    }
-
-    /**
-     * Returns the 'getlocs' item specified by the given subtab name, or 'null' if none exists
-     * Temporary (for testing), this behaviour will be changed later in development
-     *
-     * @param {string} subtab: the name of the tab to get
-     *
-     * @returns {string | null}: the getlocs item if one exists; 'null' otherwise
-     */
-    getLoc(subtab:string) {
-        let objIndex: number = this.subtabs.indexOf(subtab);
-        if (objIndex === -1) {
-            return null;
-        } else {
-            return this.getlocs[objIndex];
-        }
     }
 
 }
