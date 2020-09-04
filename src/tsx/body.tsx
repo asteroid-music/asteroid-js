@@ -3,11 +3,12 @@ import React from 'react';
 
 //Local .tsx imports
 import { AsteroidCredits } from './body-content/credits';
-
+import { AsteroidQueue } from './body-content/queue'
 
 //Lookup container for modules
 const bodyContent = {
     Credits: AsteroidCredits,
+    Queue: AsteroidQueue,
 }
 
 /**

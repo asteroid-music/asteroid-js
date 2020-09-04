@@ -43,6 +43,8 @@ class AsteroidTabs extends React.Component<AsteroidTabsProps> {
         return <Tabs
             value={this.props.currTab || false}
             onChange={(event: object, value: string) => {this.props.tabCallback(event,value);}}
+            variant="scrollable"
+            scrollButtons="on"
         >
             {this.props.tabNames.map((tabName: string) => {
                 return <Tab key={tabName} value={tabName} label={tabName} />
@@ -56,6 +58,8 @@ class AsteroidTabs extends React.Component<AsteroidTabsProps> {
                 value={this.props.currSubTab || false}
                 onChange={(event: object, value: string) => {this.props.subTabCallback(event,value);}}
                 indicatorColor="secondary"
+                variant="scrollable"
+                scrollButtons="on"
             >
                 {this.props.subTabNames.map((subTabName: string) => {
                     return <Tab key={subTabName} value={subTabName} label={subTabName} />

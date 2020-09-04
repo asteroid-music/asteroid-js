@@ -1,6 +1,6 @@
 //Basic imports
 import React from 'react';
-import { Container } from '@material-ui/core'
+import { Box } from '@material-ui/core';
 
 //Local .tsx imports
 import { AsteroidTabsProps, AsteroidTabs } from './tabs'
@@ -141,7 +141,7 @@ class App extends React.Component<AppProps,AppState> {
         }
 
         return (
-            <Container>
+            <Box>
                 <AsteroidTabs
                     tabNames={this.props.tabs.nameList()}
                     currTab={currTab}
@@ -153,7 +153,7 @@ class App extends React.Component<AppProps,AppState> {
                 <AsteroidBody
                     subTabName={currSubTab}
                 />
-            </Container>
+            </Box>
         );
     }
 }
