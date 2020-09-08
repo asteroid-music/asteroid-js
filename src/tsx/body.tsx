@@ -1,6 +1,6 @@
 //Basic imports
 import React from 'react';
-import { Typography } from '@material-ui/core'
+import { Typography, Container } from '@material-ui/core'
 
 //Local .tsx imports
 import { AsteroidCredits } from './body-content/credits';
@@ -11,7 +11,11 @@ import { AsteroidURLRequester } from './body-content/url-request'
  * Body component for when no tab is selected
  */
 function AsteroidNullBody(props: {}){
-    return <Typography variant='body1'>No tab selected!</Typography>
+    return <Container>
+        <Typography variant='body1'>
+            No tab selected!
+        </Typography>
+    </Container>
 }
 
 //Lookup container for modules
