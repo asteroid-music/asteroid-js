@@ -141,7 +141,7 @@ class App extends React.Component<AppProps,AppState> {
         }
 
         return (
-            <Box>
+            <Box width="100%">
                 <AsteroidTabs
                     tabNames={this.props.tabs.nameList()}
                     currTab={currTab}
