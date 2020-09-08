@@ -1,6 +1,10 @@
 //Basic imports
 import React from 'react';
-import { TableRow, TableCell } from '@material-ui/core'
+import { ListItem, ListItemText, Typography } from '@material-ui/core';
+import { red, green } from '@material-ui/core/colors';
+import ArrowUpwardIcon from '@material-ui/icons/ArrowUpward';
+import ArrowDownwardIcon from '@material-ui/icons/ArrowDownward';
+import IconButton from '@material-ui/core/IconButton';
 
 /**
  * Interface for a song item.
@@ -28,7 +32,6 @@ interface SongInterface {
      * Optional, as only given for songs in the current play queue.
      */
     votes?: number
-
 }
 
 /**
@@ -36,14 +39,22 @@ interface SongInterface {
  * with a single song item.
  */
 function AsteroidSongItem(props: SongInterface) {
-    let votecell = props.votes && <TableCell>{props.votes}</TableCell>;
-    return <TableRow>
-        <TableCell>{props.song}</TableCell>
-        <TableCell>{props.artist}</TableCell>
-        <TableCell>{props.album}</TableCell>
-        <TableCell>{props.duration}</TableCell>
-        {votecell}
-    </TableRow>
+
+    let votesInfo = props.votes && <Typography>{props.votes}</Typography>
+
+    return <ListItem button>
+        <ListItemText
+            primary={props.song}
+            secondary={props.artist}
+        />
+        <IconButton>
+            <ArrowUpwardIcon style={{ color: green[500] }}/>
+        </IconButton>
+        {votesInfo}
+        <IconButton>
+            <ArrowDownwardIcon style={{ color: red[500] }}/>
+        </IconButton>
+    </ListItem>
 }
 
 export { AsteroidSongItem, SongInterface }

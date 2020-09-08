@@ -1,6 +1,6 @@
 //Basic imports
 import React from 'react';
-import { Typography, Container, TableContainer, Table, TableHead, TableBody, TableRow, TableCell, Paper } from '@material-ui/core'
+import { Typography, Container, List } from '@material-ui/core'
 import axios from 'axios'
 
 //Relative local imports
@@ -35,24 +35,11 @@ function AsteroidQueue(props: {}) {
         <Typography>
             Currently playing song: Unknown
         </Typography>
-        <TableContainer component={Paper}>
-            <Table size="small">
-                <TableHead>
-                    <TableRow>
-                            <TableCell>Song</TableCell>
-                            <TableCell>Artist</TableCell>
-                            <TableCell>Album</TableCell>
-                            <TableCell>Duration</TableCell>
-                            <TableCell>Votes</TableCell>
-                    </TableRow>
-                </TableHead>
-                <TableBody>
-                    {mock_json_data.map((jsonitem: SongInterface) => {
-                        return <AsteroidSongItem key={jsonitem.id} {...jsonitem}/>
-                    })}
-                </TableBody>
-            </Table>
-        </TableContainer>
+        <List>
+            {mock_json_data.map((jsonitem: SongInterface) => {
+                return <AsteroidSongItem key={jsonitem.id} {...jsonitem}/>
+            })}
+        </List>
     </Container>
 }
 
