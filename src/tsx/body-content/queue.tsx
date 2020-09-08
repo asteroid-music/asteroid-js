@@ -1,17 +1,10 @@
 //Basic imports
 import React from 'react';
 import { Typography, Container, TableContainer, Table, TableHead, TableBody, TableRow, TableCell, Paper } from '@material-ui/core'
-import { makeStyles } from '@material-ui/core/styles';
 import axios from 'axios'
 
-interface QueueDataInterface {
-    artist: string,
-    song: string,
-    duration: number,
-    album: string,
-    id: string,
-    votes: number
-}
+//Relative local imports
+import { AsteroidSongItem, SongInterface } from '../song-item.tsx'
 
 //Mock data for testing purposes; will be removed later
 const mock_json_data = [
@@ -20,7 +13,7 @@ const mock_json_data = [
         song: "Song1",
         duration: 225.3,
         album: "Album1",
-        id: "wadkjhawdk",
+        id: 12,
         votes: 1
     },
     {
@@ -28,7 +21,7 @@ const mock_json_data = [
         song: "Song2",
         duration: 963.21,
         album: "Album2",
-        id: "essejghjsehg",
+        id: 24,
         votes: 2
     }
 ]
@@ -54,14 +47,8 @@ function AsteroidQueue(props: {}) {
                     </TableRow>
                 </TableHead>
                 <TableBody>
-                    {mock_json_data.map((jsonitem: QueueDataInterface) => {
-                        return <TableRow key={jsonitem.id}>
-                            <TableCell>{jsonitem.song}</TableCell>
-                            <TableCell>{jsonitem.artist}</TableCell>
-                            <TableCell>{jsonitem.album}</TableCell>
-                            <TableCell>{jsonitem.duration}</TableCell>
-                            <TableCell>{jsonitem.votes}</TableCell>
-                        </TableRow>
+                    {mock_json_data.map((jsonitem: SongInterface) => {
+                        return <AsteroidSongItem key={jsonitem.id} {...jsonitem}/>
                     })}
                 </TableBody>
             </Table>
