@@ -4,6 +4,10 @@
         "subtabs": ["Queue", "Recently Requested", "Downloaded", "Favourites"]
     },
     {
+        "name": "Request",
+        "subtabs": ["URL Request"]
+    },
+    {
         "name": "Settings",
         "subtabs": ["Account","Tabs"]
     },

@@ -40,9 +40,11 @@ interface SongInterface {
  */
 function AsteroidSongItem(props: SongInterface) {
 
+    //TODO: should have a "more info" button that shows all the props info
+
     let votesInfo = props.votes && <Typography>{props.votes}</Typography>
 
-    return <ListItem button>
+    return <ListItem>
         <ListItemText
             primary={props.song}
             secondary={props.artist}
