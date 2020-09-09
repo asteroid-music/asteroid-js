@@ -6,6 +6,7 @@ import { Typography, Container } from '@material-ui/core'
 import { AsteroidCredits } from './body-content/credits';
 import { AsteroidQueue } from './body-content/queue'
 import { AsteroidURLRequester } from './body-content/url-request'
+import { AsteroidSongList } from './body-content/all-songs'
 
 /**
  * Body component for when no tab is selected
@@ -23,6 +24,7 @@ const bodyContent = {
     Credits: AsteroidCredits,
     Queue: AsteroidQueue,
     "URL Request": AsteroidURLRequester,
+    "All Songs": AsteroidSongList,
     null: AsteroidNullBody
 }
 
