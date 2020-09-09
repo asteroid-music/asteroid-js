@@ -70,6 +70,7 @@ class AsteroidSongList extends React.Component<{},SongListState> {
                         return <AsteroidSongItem key={jsonitem.id} {...jsonitem}/>
                     })}
                 </List>
+                refreshButtonOrNull = refreshButton;
             } else {
                 listInfoItem = <Typography>No songs found! Go to the Request tab to add some!</Typography>
                 refreshButtonOrNull = refreshButton;
