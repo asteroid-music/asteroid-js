@@ -76,19 +76,25 @@ class AsteroidSongItem extends React.Component<SongItemProps,SongItemState> {
         return song.artist + " - " + song.album + " - " + song.duration;
     }
 
+    _vote(value: number) {
+        let voteState = this.state.voteState;
+        axios.post<{message: string}>("/queue",{
+            id: this.props.song?.id,
+            vote: value
+        }).catch(
+            (error) => {
+                this.setState({voteState:voteState});
+            }
+        );
+    }
+
     upvoteCallback() {
         let voteState = this.state.voteState;
         if (voteState == 1) {
+            this._vote(-1);
             this.setState({voteState:0});
         } else {
-            axios.post<{message: string}>("/queue",{id:this.props.song?.id}).then(
-                (response) => {
-                }
-            ).catch(
-                (error) => {
-                    this.setState({voteState:voteState});
-                }
-            );
+            this._vote(1);
             this.setState({voteState:1});
         }
     }
@@ -96,16 +102,10 @@ class AsteroidSongItem extends React.Component<SongItemProps,SongItemState> {
     downvoteCallback() {
         let voteState = this.state.voteState;
         if (voteState == -1) {
-            axios.post<{message: string}>("/queue",{id:this.props.song?.id}).then(
-                (response) => {
-                }
-            ).catch(
-                (error) => {
-                    this.setState({voteState:-1});
-                }
-            );
+            this._vote(1);
             this.setState({voteState:0});
         } else {
+            this._vote(-1);
             this.setState({voteState:-1});
         }
     }
