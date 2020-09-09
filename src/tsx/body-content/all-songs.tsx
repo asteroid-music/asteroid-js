@@ -25,8 +25,8 @@ class AsteroidSongList extends React.Component<{},SongListState> {
     }
 
     _refreshSongs() {
-        axios.get("/music/songs").then(
-            (response: any) => {
+        axios.get<SongInterface[]>("/music/songs").then(
+            (response) => {
                 this.setState({
                     musicData: response.data
                 });

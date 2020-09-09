@@ -25,8 +25,8 @@ class AsteroidQueue extends React.Component<{},QueueState> {
     }
 
     _refreshQueue() {
-        axios.get("/queue").then(
-            (response: any) => {
+        axios.get<SongInterface[]>("/queue").then(
+            (response) => {
                 this.setState({
                     queueData: response.data
                 });

@@ -13,6 +13,11 @@ interface RequesterState {
     requestFailureNode?: any,
 }
 
+interface PostResponse {
+    message: string,
+    song: SongInterface,
+}
+
 /**
  * <AsteroidURLRequester> component for main body
  */
@@ -29,9 +34,9 @@ class AsteroidURLRequester extends React.Component<{},RequesterState> {
     makeRequest() {
         const url = this.state.url;
         this.setState({requestBeingMade: true});
-        axios.post("/music/songs",{url:url}).then(
-            (response: any) => {
-                const message: string = response?.message;
+        axios.post<PostResponse>("/music/songs",{url:url}).then(
+            (response) => {
+                const message: string = response?.data?.message;
                 const song = response?.data?.song && <AsteroidSongItem song={response.data.song} unfolded />;
 
                 const successNode = <div>
