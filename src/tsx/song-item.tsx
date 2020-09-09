@@ -4,6 +4,8 @@ import { ListItem, ListItemText, Typography } from '@material-ui/core';
 import { red, green } from '@material-ui/core/colors';
 import ArrowUpwardIcon from '@material-ui/icons/ArrowUpward';
 import ArrowDownwardIcon from '@material-ui/icons/ArrowDownward';
+import UnfoldMore from '@material-ui/icons/UnfoldMore';
+import UnfoldLess from '@material-ui/icons/UnfoldLess';
 import IconButton from '@material-ui/core/IconButton';
 
 /**
@@ -34,29 +36,88 @@ interface SongInterface {
     votes?: number
 }
 
+interface SongItemProps {
+    song: SongInterface,
+    voteButtons?: boolean,
+    unfolded?: boolean
+}
+
+interface SongItemState {
+    unfolded: boolean
+}
+
 /**
  * <AsteroidSongItem> component allowing interaction
  * with a single song item.
  */
-function AsteroidSongItem(props: SongInterface) {
+class AsteroidSongItem extends React.Component<SongItemProps,SongItemState> {
+    constructor(props) {
+        super(props);
+        this.state = {
+            unfolded: this.props.unfolded
+        };
+    }
 
-    //TODO: should have a "more info" button that shows all the props info
+    unfoldedSecondaryNode() {
+        let song = this.props.song;
+        return <div>
+            <Typography>Artist: {song.artist}</Typography>
+            <Typography>Album: {song.album}</Typography>
+            <Typography>Duration: {song.duration}</Typography>
+        </div>
+    }
 
-    let votesInfo = props.votes && <Typography>{props.votes}</Typography>
+    foldedSecondaryText() {
+        let song = this.props.song;
+        return song.artist + " - " + song.album + " - " + song.duration;
+    }
 
-    return <ListItem>
-        <ListItemText
-            primary={props.song}
-            secondary={props.artist}
-        />
-        <IconButton>
-            <ArrowUpwardIcon style={{ color: green[500] }}/>
+    render () {
+        let song = this.props.song;
+
+        let unfolded = this.state.unfolded;
+
+        let textSecondary = unfolded
+            ? this.unfoldedSecondaryNode()
+            : this.foldedSecondaryText()
+
+        let foldButton = unfolded
+            ? <IconButton onClick={() => {this.setState({unfolded:false});}}><UnfoldMore /></IconButton>
+            : <IconButton onClick={() => {this.setState({unfolded:true});}}><UnfoldLess /></IconButton>
+
+        let otherProps = unfolded
+            ? {}
+            : {
+                primaryTypographyProps: {noWrap:true},
+                secondaryTypographyProps: {noWrap:true}
+            }
+
+        let upButton = this.props.voteButtons && <IconButton>
+            <ArrowUpwardIcon
+                style={{ color: green[500] }}
+            />
         </IconButton>
-        {votesInfo}
-        <IconButton>
-            <ArrowDownwardIcon style={{ color: red[500] }}/>
+
+        let downButton = this.props.voteButtons && <IconButton>
+            <ArrowDownwardIcon
+                style={{ color: red[500] }}
+            />
         </IconButton>
-    </ListItem>
+
+        let votesInfo = song.votes && <Typography>{song.votes}</Typography>
+
+        return <ListItem>
+            <ListItemText
+                primary={song.song}
+                secondary={textSecondary}
+                {...otherProps}
+            />
+            {upButton}
+            {votesInfo}
+            {downButton}
+            {foldButton}
+        </ListItem>
+    }
 }
 
 export { AsteroidSongItem, SongInterface }

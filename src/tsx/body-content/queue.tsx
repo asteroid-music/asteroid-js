@@ -77,7 +77,7 @@ class AsteroidQueue extends React.Component<{},QueueState> {
                 } else {
                     listInfoItem = <List>
                         {queueData.map((jsonitem: SongInterface) => {
-                            return <AsteroidSongItem key={jsonitem.id} {...jsonitem}/>
+                            return <AsteroidSongItem key={jsonitem.id} song={jsonitem} voteButtons/>
                         })}
                     </List>
                     refreshButtonOrNull = refreshButton;

@@ -32,7 +32,7 @@ class AsteroidURLRequester extends React.Component<{},RequesterState> {
         axios.post("/music/songs",{url:url}).then(
             (response: any) => {
                 const message: string = response?.message;
-                const song = response?.data?.song && <AsteroidSongItem {...response.data.song} />;
+                const song = response?.data?.song && <AsteroidSongItem song={response.data.song} unfolded />;
 
                 const successNode = <div>
                     {message}
