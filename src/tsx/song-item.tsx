@@ -94,7 +94,7 @@ class AsteroidSongItem extends React.Component<SongItemProps,SongItemState> {
             this._vote(-1);
             this.setState({voteState:0});
         } else {
-            this._vote(1);
+            this._vote(1-voteState);
             this.setState({voteState:1});
         }
     }
@@ -105,7 +105,7 @@ class AsteroidSongItem extends React.Component<SongItemProps,SongItemState> {
             this._vote(1);
             this.setState({voteState:0});
         } else {
-            this._vote(-1);
+            this._vote(voteState-1);
             this.setState({voteState:-1});
         }
     }
