@@ -4,6 +4,7 @@ import Container from '@material-ui/core/Container';
 import Typography from '@material-ui/core/Typography';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
+import CircularProgress from '@material-ui/core/CircularProgress';
 import axios from 'axios';
 
 //Local relative import
@@ -88,7 +89,7 @@ class AsteroidURLRequester extends React.Component<{},RequesterState> {
         if (requestBeingMade) {
             return <Container>
                 <Typography variant="body1">
-                    Waiting on a response for request of url '{url}'
+                    Waiting on a response for request of url '{url}' <CircularProgress />
                 </Typography>
             </Container>
         } else if (requestSuccessNode) {

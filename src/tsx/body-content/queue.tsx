@@ -4,6 +4,7 @@ import Typography from '@material-ui/core/Typography';
 import Container from '@material-ui/core/Container';
 import List from '@material-ui/core/List';
 import Button from '@material-ui/core/Button';
+import CircularProgress from '@material-ui/core/CircularProgress';
 import axios from 'axios';
 
 //Relative local imports
@@ -61,7 +62,7 @@ class AsteroidQueue extends React.Component<{},QueueState> {
             Refresh queue
         </Button>
 
-        let listInfoItem = <Typography>Requesting queue data...</Typography>
+        let listInfoItem = <Typography>Requesting queue data... <CircularProgress /></Typography>
         let refreshButtonOrNull;
 
         if (queueData) {
