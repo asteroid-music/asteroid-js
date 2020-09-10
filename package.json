@@ -8,7 +8,7 @@
     "build": "webpack --config wp.config.js",
     "dev": "webpack-dev-server --config wp.config.js --mode development"
   },
-  "author": "OneSlightWeirdo",
+  "author": "JR-Mitchell",
   "license": "GPL-3.0",
   "devDependencies": {
     "@babel/core": "^7.11.4",
