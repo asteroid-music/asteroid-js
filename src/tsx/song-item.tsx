@@ -1,8 +1,11 @@
 //Basic imports
 import React from 'react';
 import type {ElementType} from 'react';
-import { ListItem, ListItemText, Typography } from '@material-ui/core';
-import { red, green } from '@material-ui/core/colors';
+import ListItem from '@material-ui/core/ListItem';
+import ListItemText from '@material-ui/core/ListItemText';
+import Typography from '@material-ui/core/Typography';
+import green from '@material-ui/core/colors/green';
+import red from '@material-ui/core/colors/red';
 import ArrowUpwardIcon from '@material-ui/icons/ArrowUpward';
 import ArrowDownwardIcon from '@material-ui/icons/ArrowDownward';
 import UnfoldMore from '@material-ui/icons/UnfoldMore';

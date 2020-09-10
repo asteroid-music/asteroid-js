@@ -1,6 +1,6 @@
 //Basic imports
 import React from 'react';
-import { Typography } from '@material-ui/core'
+import Typography from '@material-ui/core/Typography';
 
 /**
  * <AsteroidCredits> component for main body

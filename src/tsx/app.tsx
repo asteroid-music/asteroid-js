@@ -1,6 +1,6 @@
 //Basic imports
 import React from 'react';
-import { Box } from '@material-ui/core';
+import Box from '@material-ui/core/Box';
 
 //Local .tsx imports
 import { AsteroidTabsProps, AsteroidTabs } from './tabs'

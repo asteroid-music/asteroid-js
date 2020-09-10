@@ -1,7 +1,10 @@
 //Basic imports
 import React from 'react';
-import { Typography, Container, List, Button } from '@material-ui/core'
-import axios from 'axios'
+import Typography from '@material-ui/core/Typography';
+import Container from '@material-ui/core/Container';
+import List from '@material-ui/core/List';
+import Button from '@material-ui/core/Button';
+import axios from 'axios';
 
 //Relative local imports
 import { AsteroidSongItem, SongInterface } from '../song-item.tsx'

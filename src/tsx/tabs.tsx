@@ -1,5 +1,8 @@
 import React from 'react';
-import { Tabs, AppBar, Tab, Paper } from '@material-ui/core'
+import Tabs from '@material-ui/core/Tabs';
+import AppBar from '@material-ui/core/AppBar';
+import Tab from '@material-ui/core/Tab';
+import Paper from '@material-ui/core/Paper';
 
 /**
  * Props for AsteroidTabs react element
