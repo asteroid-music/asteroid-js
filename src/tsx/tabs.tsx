@@ -57,8 +57,9 @@ class AsteroidTabs extends React.Component<AsteroidTabsProps> {
 
     subBar() {
         if (this.props.subTabNames) {
+            let currSubTab = this.props.subTabNames.includes(this.props.currSubTab) && this.props.currSubTab;
             return <Paper><Tabs
-                value={this.props.currSubTab || false}
+                value={currSubTab}
                 onChange={(event: object, value: string) => {this.props.subTabCallback(event,value);}}
                 indicatorColor="secondary"
                 variant="scrollable"

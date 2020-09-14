@@ -132,7 +132,7 @@ class App extends React.Component<AppProps,AppState> {
     render() {
         const currTab: string = this.state.currTab;
         const viewedTab: string = this.state.viewedTab;
-        const currSubTab: string = currTab == viewedTab ? this.state.currSubTab : null;
+        const currSubTab: string = this.state.currSubTab;
         const showSubTabBar: boolean = this.state.showSubTabBar;
 
         let subTabNames: string[] | null = null;
