@@ -75,7 +75,7 @@ class AsteroidQueue extends React.Component<{},QueueState> {
                 lastIndex = (lastIndex > 0) ? lastIndex + 1 : queueData.length;
                 lastIndex = (queueData[lastIndex-1].votes <= 0) ? lastIndex-1 : lastIndex;
                 queueData = queueData.slice(0,lastIndex);
-                if (queueData[0].votes == 0) {
+                if (queueData.length === 0 || queueData[0].votes == 0) {
                     listInfoItem = <Typography>No songs found in the queue! Get upvoting!</Typography>
                     refreshButtonOrNull = refreshButton;
                 } else {
