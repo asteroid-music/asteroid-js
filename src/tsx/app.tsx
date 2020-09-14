@@ -61,7 +61,7 @@ class App extends React.Component<AppProps,AppState> {
 
         //Check currSubTab
         let currSubTab: string | null = null;
-        if (currTab && this.props.tabs.tabs[currTab].includes(
+        if (currTab && this.props.tabs.get(currTab).includes(
             this.props.currSubTab
         )) {
             currSubTab = this.props.currSubTab;
