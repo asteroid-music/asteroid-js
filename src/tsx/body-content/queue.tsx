@@ -62,7 +62,7 @@ class AsteroidQueue extends React.Component<{},QueueState> {
             Refresh queue
         </Button>
 
-        let listInfoItem = <Typography>Requesting queue data... <CircularProgress /></Typography>
+        let listInfoItem = <div><Typography>Requesting queue data... </Typography><CircularProgress /></div>
         let refreshButtonOrNull;
 
         if (queueData) {

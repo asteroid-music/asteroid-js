@@ -62,7 +62,7 @@ class AsteroidSongList extends React.Component<{},SongListState> {
             Refresh song list
         </Button>
 
-        let listInfoItem = <Typography>Requesting queue data... <CircularProgress /></Typography>
+        let listInfoItem = <div><Typography>Requesting queue data... </Typography><CircularProgress /></div>
         let refreshButtonOrNull;
 
         if (musicData) {

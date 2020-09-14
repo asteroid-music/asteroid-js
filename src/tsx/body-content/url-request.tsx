@@ -89,8 +89,9 @@ class AsteroidURLRequester extends React.Component<{},RequesterState> {
         if (requestBeingMade) {
             return <Container>
                 <Typography variant="body1">
-                    Waiting on a response for request of url '{url}' <CircularProgress />
+                    Waiting on a response for request of url '{url}'
                 </Typography>
+                <CircularProgress />
             </Container>
         } else if (requestSuccessNode) {
             return <Container>
