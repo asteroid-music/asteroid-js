@@ -67,16 +67,17 @@ class AsteroidSongItem extends React.Component<SongItemProps,SongItemState> {
 
     unfoldedSecondaryNode() {
         let song = this.props.song;
+        let dur = this._asTime(song.duration);
         return <div>
             <Typography>Artist: {song.artist}</Typography>
             <Typography>Album: {song.album}</Typography>
-            <Typography>Duration: {song.duration}</Typography>
+            <Typography>Duration: {dur}</Typography>
         </div>
     }
 
     foldedSecondaryText() {
         let song = this.props.song;
-        return song.artist + " - " + song.album + " - " + song.duration;
+        return song.artist + " - " + song.album + " - " + this._asTime(song.duration);
     }
 
     _vote(value: number) {
@@ -89,6 +90,12 @@ class AsteroidSongItem extends React.Component<SongItemProps,SongItemState> {
                 this.setState({voteState:voteState});
             }
         );
+    }
+
+    _asTime(seconds: number) {
+        let secs: number = seconds % 60;
+        let mins: number = (seconds-secs)/60;
+        return mins.toString()+":"+secs.toString();
     }
 
     upvoteCallback() {
@@ -124,8 +131,8 @@ class AsteroidSongItem extends React.Component<SongItemProps,SongItemState> {
             : this.foldedSecondaryText();
 
         let foldButton = unfolded
-            ? <IconButton onClick={() => {this.setState({unfolded:false});}}><UnfoldMore /></IconButton>
-            : <IconButton onClick={() => {this.setState({unfolded:true});}}><UnfoldLess /></IconButton>
+            ? <IconButton onClick={() => {this.setState({unfolded:false});}}><UnfoldLess /></IconButton>
+            : <IconButton onClick={() => {this.setState({unfolded:true});}}><UnfoldMore /></IconButton>
 
         let otherProps = unfolded
             ? {
