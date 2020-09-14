@@ -12,6 +12,6 @@ import { TabArray } from './tabs'
 const tabs = new TabArray(require('../json/tabs.json'))
 
 ReactDOM.render(
-    React.createElement(App, {tabs: tabs}, null),
+    React.createElement(App, {tabs: tabs, currTab: "Voting", currSubTab: "Queue"}, null),
     document.getElementById('root')
 )
