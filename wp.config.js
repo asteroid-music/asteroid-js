@@ -1,10 +1,11 @@
 const HTMLWebpackPlugin = require('html-webpack-plugin')
+var path = require('path');
 
 const WebpackConfig = {
-    entry: "./src/ts/index.ts",
+    entry: "./src/index.ts",
     plugins: [
         new HTMLWebpackPlugin({
-            template: "src/html/index.html",
+            template: "src/index.html",
             filename: "index.html"
         })
     ],
@@ -21,6 +22,7 @@ const WebpackConfig = {
         ]
     },
     resolve: {
+        modules: [path.resolve(__dirname,'src'), 'node_modules'],
         extensions: ['.ts', '.tsx', '.js']
     }
 };

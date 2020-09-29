@@ -3,11 +3,11 @@ import React from 'react';
 import Box from '@material-ui/core/Box';
 
 //Local .tsx imports
-import { AsteroidTabsProps, AsteroidTabs } from './tabs'
-import { AsteroidBody } from './body'
+import { AsteroidTabsProps, AsteroidTabs } from 'tsx/tabs'
+import { AsteroidBody } from 'tsx/body'
 
 //Local .ts imports
-import { TabArray } from '../ts/tabs'
+import { TabArray } from 'ts/tabs'
 
 /**
  * Utility interface describing props for the main React <App>
@@ -158,4 +158,6 @@ class App extends React.Component<AppProps,AppState> {
     }
 }
 
-export { App, AppProps }
+export default App;
+
+export { AppProps };
