@@ -4,10 +4,10 @@ import Typography from '@material-ui/core/Typography';
 import Container from '@material-ui/core/Container';
 
 //Local .tsx imports
-import { AsteroidCredits } from './body-content/credits';
-import { AsteroidQueue } from './body-content/queue'
-import { AsteroidURLRequester } from './body-content/url-request'
-import { AsteroidSongList } from './body-content/all-songs'
+import { AsteroidCredits } from 'views/Credits';
+import { AsteroidQueue } from 'views/Queue'
+import { AsteroidURLRequester } from 'views/URLRequest'
+import { AsteroidSongList } from 'views/AllSongs'
 
 /**
  * Body component for when no tab is selected

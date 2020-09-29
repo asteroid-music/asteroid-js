@@ -3,11 +3,8 @@ import React from 'react';
 import Box from '@material-ui/core/Box';
 
 //Local .tsx imports
-import { AsteroidTabsProps, AsteroidTabs } from 'tsx/tabs'
-import { AsteroidBody } from 'tsx/body'
-
-//Local .ts imports
-import { TabArray } from 'ts/tabs'
+import { AsteroidTabsProps, AsteroidTabs, TabArray } from 'parts/TopBar'
+import { AsteroidBody } from 'body'
 
 /**
  * Utility interface describing props for the main React <App>

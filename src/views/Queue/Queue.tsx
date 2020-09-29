@@ -8,7 +8,7 @@ import CircularProgress from '@material-ui/core/CircularProgress';
 import axios from 'axios';
 
 //Relative local imports
-import { AsteroidSongItem, SongInterface } from '../song-item.tsx'
+import { AsteroidSongItem, SongInterface } from 'components/SongItem';
 
 /**
  * State for the <AsteroidQueue> component
