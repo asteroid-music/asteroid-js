@@ -7,7 +7,7 @@ import Box from '@material-ui/core/Box';
 //Import from local src/
 import TopBar from 'parts/TopBar';
 import { TabArray } from 'utils/Tabs';
-import { AsteroidBody } from 'body';
+import NoOpenTab from 'views/NoOpenTab';
 
 /**
  * Utility interface describing props for the main React <App>
@@ -140,8 +140,10 @@ class App extends React.Component<AppProps,AppState> {
 
         let subTabNames: string[] | null = null;
         if (viewedTab && showSubTabBar) {
-            subTabNames = this.props.tabs.get(viewedTab)?.subtabs;
+            subTabNames = this.props.tabs.get(viewedTab)?.nameList();
         }
+
+        let CurrSubTabComponent = this.props.tabs.get(currTab)?.get(currSubTab)?.component;
 
         return (
             <Box width="100%">
@@ -153,9 +155,7 @@ class App extends React.Component<AppProps,AppState> {
                     tabCallback={(event: object, tabName: string) => {this.tabChangeCallback(event,tabName)}}
                     subTabCallback={(event: object, subTabName: string) => {this.subTabChangeCallback(event,subTabName)}}
                  />
-                <AsteroidBody
-                    subTabName={currSubTab}
-                />
+                {CurrSubTabComponent ? <CurrSubTabComponent/> : <NoOpenTab />}
             </Box>
         );
     }

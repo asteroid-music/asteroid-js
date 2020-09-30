@@ -1,12 +1,42 @@
 /**
+ * Interface describing an object with the same elements as SubTabObject
+ */
+interface SubTabObjectLike {
+    /** The name of the tab */
+    name: string;
+
+    /** A string array containing names of subtabs */
+    component: React.ComponentType<any>;
+}
+
+/**
  * Interface describing an object with the same elements as TabObject
  */
 interface TabObjectLike {
     /** The name of the tab */
     name: string;
 
-    /** A string array containing names of subtabs */
-    subtabs: string[];
+    /** A subtab array containing names of subtabs */
+    subtabs: SubTabObjectLike[];
+}
+
+class SubTabObject {
+    /** The name of the subtab */
+    name: string;
+
+    /** The component of the subtab */
+    component: React.ComponentType<any>;
+
+    /**
+     * Constructor method
+     *
+     * @param {object} rawJson: a raw json representing the object
+     */
+    constructor(rawJson: SubTabObjectLike) {
+        this.name = rawJson.name;
+        this.component = rawJson.component;
+    }
+
 }
 
 /**
@@ -18,7 +48,7 @@ class TabObject {
     name: string;
 
     /** A string array containing names of subtabs */
-    subtabs: string[];
+    subtabs: SubTabObject[];
 
     /**
      * Constructor method
@@ -27,7 +57,20 @@ class TabObject {
      */
     constructor(rawJson: TabObjectLike) {
         this.name = rawJson.name;
-        this.subtabs = rawJson.subtabs;
+        this.subtabs = rawJson.subtabs.map((item: SubTabObjectLike) => {
+            return new SubTabObject(item);
+        });
+    }
+
+    /**
+     * Gets a list of names of subtabs in the tab
+     *
+     * @returns {string[]} tablist: the name of each subtab
+     */
+    nameList() {
+       return this.subtabs.map((subtab: SubTabObject) => {
+            return subtab.name;
+       });
     }
 
     /**
@@ -38,9 +81,26 @@ class TabObject {
      * @returns {boolean} isin: true if subtab is in the tab; false otherwise
      */
     includes(subtab:string) {
-        return this.subtabs.includes(subtab);
+        return this.nameList().includes(subtab);
     }
 
+    /**
+     * Returns the subtab specified by the given subtab name,
+     *      or 'null' if none exists
+     *
+     * @param {string} subtab: the name of the subtab to get
+     *
+     * @returns {SubTabObject | null} subtab: the specified subtab if exists;
+     *      'null' otherwise
+     */
+    get(subtab:string) {
+        let objIndex: number = this.nameList().indexOf(subtab);
+        if (objIndex === -1) {
+            return null;
+        } else {
+            return this.subtabs[objIndex];
+        }
+    }
 }
 
 /**
