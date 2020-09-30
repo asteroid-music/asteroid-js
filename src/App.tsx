@@ -5,8 +5,9 @@ import React from 'react';
 import Box from '@material-ui/core/Box';
 
 //Import from local src/
-import TopBar, { TabArray } from 'parts/TopBar'
-import { AsteroidBody } from 'body'
+import TopBar from 'parts/TopBar';
+import { TabArray } from 'utils/Tabs';
+import { AsteroidBody } from 'body';
 
 /**
  * Utility interface describing props for the main React <App>

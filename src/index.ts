@@ -6,7 +6,7 @@ import ReactDOM from 'react-dom'
 import App from 'App'
 
 //Local .ts imports
-import { TabArray } from 'parts/TopBar/Tabs'
+import { TabArray } from 'utils/Tabs'
 
 //Set up tab structure
 const tabs = new TabArray([
