@@ -1,9 +1,11 @@
-//Basic imports
+//Import from external module 'react'
 import React from 'react';
+
+//Import from external module '@material-ui/core'
 import Box from '@material-ui/core/Box';
 
-//Local .tsx imports
-import { AsteroidTabsProps, AsteroidTabs, TabArray } from 'parts/TopBar'
+//Import from local src/
+import TopBar, { TabArray } from 'parts/TopBar'
 import { AsteroidBody } from 'body'
 
 /**
@@ -126,6 +128,9 @@ class App extends React.Component<AppProps,AppState> {
         }
     }
 
+    /**
+     * React render method
+     */
     render() {
         const currTab: string = this.state.currTab;
         const viewedTab: string = this.state.viewedTab;
@@ -139,7 +144,7 @@ class App extends React.Component<AppProps,AppState> {
 
         return (
             <Box width="100%">
-                <AsteroidTabs
+                <TopBar
                     tabNames={this.props.tabs.nameList()}
                     currTab={currTab}
                     subTabNames={subTabNames}
@@ -156,5 +161,3 @@ class App extends React.Component<AppProps,AppState> {
 }
 
 export default App;
-
-export { AppProps };

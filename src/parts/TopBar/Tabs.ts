@@ -10,7 +10,8 @@ interface TabObjectLike {
 }
 
 /**
- * Class describing named tab, along with strings representing all the subtabs it contains
+ * Class describing named tab, along with strings representing all the subtabs
+ * it contains
  */
 class TabObject {
     /** The name of the tab */
@@ -76,7 +77,8 @@ class TabArray {
      *
      * @param {string} tab: the name of the tab to check for
      *
-     * @returns {boolean} isin: true if tab is in the tab array; false otherwise
+     * @returns {boolean} isin: true if tab is in the tab array;
+     *      false otherwise
      */
     includes(tab:string) {
         return this.nameList().includes(tab);
@@ -87,7 +89,8 @@ class TabArray {
      *
      * @param {string} tab: the name of the tab to get
      *
-     * @returns {TabObject | null} tab: the specified tab if exists; 'null' otherwise
+     * @returns {TabObject | null} tab: the specified tab if exists;
+     *      'null' otherwise
      */
     get(tab:string) {
         let objIndex: number = this.nameList().indexOf(tab);

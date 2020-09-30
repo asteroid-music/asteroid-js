@@ -1,6 +1,9 @@
 //Main component
-export { AsteroidTabsProps, AsteroidTabs } from './TopBar';
+export { default } from './TopBar';
+
+//Props interface
+export { default as TopBarProps } from './Props'
 
 //Tabs loading information
-export { TabArray } from './Tabs'
+export { TabObjectLike, TabObject, TabArray } from './Tabs'
 
