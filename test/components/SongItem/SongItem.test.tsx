@@ -1,8 +1,9 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { AsteroidSongItem } from '../../../src/components/SongItem';
+import SongItem, {SongInterface} from '../../../src/components/SongItem';
 
-const testSongVoteless = {
+//Test SongInterface without votes
+const testSongVoteless: SongInterface = {
     artist: "This is a test artist name",
     song: "This is a test song name",
     duration: 556,
@@ -10,11 +11,13 @@ const testSongVoteless = {
     id: 1,
 }
 
-const testSongVoteful = {
+//Test SongInterface with votes
+const testSongVoteful: SongInterface = {
     votes: 3,
     ...testSongVoteless
 }
 
+//Test that the <SongItem> components render correctly
 test.each([
     {song:testSongVoteless},
     {song:testSongVoteful},
@@ -26,7 +29,7 @@ test.each([
     {song:testSongVoteful,unfolded:true,voteButtons:true}
 ])("<SongItem {...%o}> renders correctly", (props) => {
     const item = renderer
-        .create(<AsteroidSongItem {...props} />)
+        .create(<SongItem {...props} />)
         .toJSON();
     expect(item).toMatchSnapshot();
-})
+});

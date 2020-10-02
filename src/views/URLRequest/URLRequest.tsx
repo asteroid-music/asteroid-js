@@ -8,7 +8,7 @@ import CircularProgress from '@material-ui/core/CircularProgress';
 import axios from 'axios';
 
 //Local relative import
-import { SongInterface, AsteroidSongItem } from 'components/SongItem';
+import SongItem, { SongInterface } from 'components/SongItem';
 
 interface RequesterState {
     url: string,
@@ -41,7 +41,7 @@ class AsteroidURLRequester extends React.Component<{},RequesterState> {
         axios.post<PostResponse>("/music/songs",{url:url}).then(
             (response) => {
                 const message: string = response?.data?.message;
-                const song = response?.data?.song && <AsteroidSongItem song={response.data.song} unfolded />;
+                const song = response?.data?.song && <SongItem song={response.data.song} unfolded />;
 
                 const successNode = <div>
                     {message}

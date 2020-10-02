@@ -1,62 +1,36 @@
-//Basic imports
+//Imports from external 'react' module
 import React from 'react';
 import type { ElementType } from 'react';
+
+//Imports from external '@material-ui/core' module
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import Typography from '@material-ui/core/Typography';
+
+//Imports from external '@material-ui/core/colors' module
 import green from '@material-ui/core/colors/green';
 import red from '@material-ui/core/colors/red';
+
+//Imports from external '@material-ui/icons' module
 import ArrowUpwardIcon from '@material-ui/icons/ArrowUpward';
 import ArrowDownwardIcon from '@material-ui/icons/ArrowDownward';
 import UnfoldMore from '@material-ui/icons/UnfoldMore';
 import UnfoldLess from '@material-ui/icons/UnfoldLess';
 import IconButton from '@material-ui/core/IconButton';
+
+//Import from external 'axios' module
 import axios from 'axios';
 
-/**
- * Interface for a song item.
- * Note that songs pulled from get requests to "/queue" also have a
- * 'votes' property whereas other songs may not
- */
-interface SongInterface {
-    /** Name of the song's artist */
-    artist: string,
-
-    /** Name of the song */
-    song: string,
-
-    /** Duration of the song, in seconds (float if necessary) */
-    duration: number,
-
-    /** Name of the album that the song comes from */
-    album: string,
-
-    /** Unique ID that the song is stored under in the backend database */
-    id: number,
-
-    /**
-     * Number of votes cast for the particular song.
-     * Optional, as only given for songs in the current play queue.
-     */
-    votes?: number
-}
-
-interface SongItemProps {
-    song: SongInterface,
-    voteButtons?: boolean,
-    unfolded?: boolean
-}
-
-interface SongItemState {
-    unfolded: boolean,
-    voteState: number
-}
+//Imports from local directory
+import SongInterface from './SongInterface';
+import SongItemProps from './Props';
+import SongItemState from './State';
 
 /**
- * <AsteroidSongItem> component allowing interaction
+ * <SongItem> component allowing interaction
  * with a single song item.
  */
-class AsteroidSongItem extends React.Component<SongItemProps,SongItemState> {
+class SongItem extends React.Component<SongItemProps,SongItemState> {
     constructor(props) {
         super(props);
         this.state = {
@@ -185,4 +159,4 @@ class AsteroidSongItem extends React.Component<SongItemProps,SongItemState> {
     }
 }
 
-export { AsteroidSongItem, SongInterface }
+export default SongItem;
