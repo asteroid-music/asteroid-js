@@ -1,450 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<SongItem {...{ song:
-   { artist: 'This is a test artist name',
-     song: 'This is a test song name',
-     duration: 556,
-     album: 'This is a test album name',
-     id: 1 } }}> renders correctly 1`] = `
-<li
-  className="MuiListItem-root MuiListItem-gutters"
-  disabled={false}
->
-  <div
-    className="MuiListItemText-root MuiListItemText-multiline"
-  >
-    <span
-      className="MuiTypography-root MuiListItemText-primary MuiTypography-body1 MuiTypography-noWrap MuiTypography-displayBlock"
-    >
-      This is a test song name
-    </span>
-    <p
-      className="MuiTypography-root MuiListItemText-secondary MuiTypography-body2 MuiTypography-colorTextSecondary MuiTypography-noWrap MuiTypography-displayBlock"
-    >
-      This is a test artist name - This is a test album name - 9:16
-    </p>
-  </div>
-  <button
-    className="MuiButtonBase-root MuiIconButton-root"
-    disabled={false}
-    onBlur={[Function]}
-    onClick={[Function]}
-    onDragLeave={[Function]}
-    onFocus={[Function]}
-    onKeyDown={[Function]}
-    onKeyUp={[Function]}
-    onMouseDown={[Function]}
-    onMouseLeave={[Function]}
-    onMouseUp={[Function]}
-    onTouchEnd={[Function]}
-    onTouchMove={[Function]}
-    onTouchStart={[Function]}
-    tabIndex={0}
-    type="button"
-  >
-    <span
-      className="MuiIconButton-label"
-    >
-      <svg
-        aria-hidden={true}
-        className="MuiSvgIcon-root"
-        focusable="false"
-        viewBox="0 0 24 24"
-      >
-        <path
-          d="M12 5.83L15.17 9l1.41-1.41L12 3 7.41 7.59 8.83 9 12 5.83zm0 12.34L8.83 15l-1.41 1.41L12 21l4.59-4.59L15.17 15 12 18.17z"
-        />
-      </svg>
-    </span>
-  </button>
-</li>
-`;
-
-exports[`<SongItem {...{ song:
-   { artist: 'This is a test artist name',
-     song: 'This is a test song name',
-     duration: 556,
-     album: 'This is a test album name',
-     id: 1 },
-  unfolded: true }}> renders correctly 1`] = `
-<li
-  className="MuiListItem-root MuiListItem-gutters"
-  disabled={false}
->
-  <div
-    className="MuiListItemText-root MuiListItemText-multiline"
-  >
-    <span
-      className="MuiTypography-root MuiListItemText-primary MuiTypography-body1 MuiTypography-displayBlock"
-    >
-      This is a test song name
-    </span>
-    <div
-      className="MuiTypography-root MuiListItemText-secondary MuiTypography-body2 MuiTypography-colorTextSecondary MuiTypography-displayBlock"
-    >
-      <div>
-        <p
-          className="MuiTypography-root MuiTypography-body1"
-        >
-          Artist: 
-          This is a test artist name
-        </p>
-        <p
-          className="MuiTypography-root MuiTypography-body1"
-        >
-          Album: 
-          This is a test album name
-        </p>
-        <p
-          className="MuiTypography-root MuiTypography-body1"
-        >
-          Duration: 
-          9:16
-        </p>
-      </div>
-    </div>
-  </div>
-  <button
-    className="MuiButtonBase-root MuiIconButton-root"
-    disabled={false}
-    onBlur={[Function]}
-    onClick={[Function]}
-    onDragLeave={[Function]}
-    onFocus={[Function]}
-    onKeyDown={[Function]}
-    onKeyUp={[Function]}
-    onMouseDown={[Function]}
-    onMouseLeave={[Function]}
-    onMouseUp={[Function]}
-    onTouchEnd={[Function]}
-    onTouchMove={[Function]}
-    onTouchStart={[Function]}
-    tabIndex={0}
-    type="button"
-  >
-    <span
-      className="MuiIconButton-label"
-    >
-      <svg
-        aria-hidden={true}
-        className="MuiSvgIcon-root"
-        focusable="false"
-        viewBox="0 0 24 24"
-      >
-        <path
-          d="M7.41 18.59L8.83 20 12 16.83 15.17 20l1.41-1.41L12 14l-4.59 4.59zm9.18-13.18L15.17 4 12 7.17 8.83 4 7.41 5.41 12 10l4.59-4.59z"
-        />
-      </svg>
-    </span>
-  </button>
-</li>
-`;
-
-exports[`<SongItem {...{ song:
-   { artist: 'This is a test artist name',
-     song: 'This is a test song name',
-     duration: 556,
-     album: 'This is a test album name',
-     id: 1 },
-  unfolded: true,
-  voteButtons: true }}> renders correctly 1`] = `
-<li
-  className="MuiListItem-root MuiListItem-gutters"
-  disabled={false}
->
-  <div
-    className="MuiListItemText-root MuiListItemText-multiline"
-  >
-    <span
-      className="MuiTypography-root MuiListItemText-primary MuiTypography-body1 MuiTypography-displayBlock"
-    >
-      This is a test song name
-    </span>
-    <div
-      className="MuiTypography-root MuiListItemText-secondary MuiTypography-body2 MuiTypography-colorTextSecondary MuiTypography-displayBlock"
-    >
-      <div>
-        <p
-          className="MuiTypography-root MuiTypography-body1"
-        >
-          Artist: 
-          This is a test artist name
-        </p>
-        <p
-          className="MuiTypography-root MuiTypography-body1"
-        >
-          Album: 
-          This is a test album name
-        </p>
-        <p
-          className="MuiTypography-root MuiTypography-body1"
-        >
-          Duration: 
-          9:16
-        </p>
-      </div>
-    </div>
-  </div>
-  <button
-    className="MuiButtonBase-root MuiIconButton-root"
-    disabled={false}
-    onBlur={[Function]}
-    onClick={[Function]}
-    onDragLeave={[Function]}
-    onFocus={[Function]}
-    onKeyDown={[Function]}
-    onKeyUp={[Function]}
-    onMouseDown={[Function]}
-    onMouseLeave={[Function]}
-    onMouseUp={[Function]}
-    onTouchEnd={[Function]}
-    onTouchMove={[Function]}
-    onTouchStart={[Function]}
-    style={Object {}}
-    tabIndex={0}
-    type="button"
-  >
-    <span
-      className="MuiIconButton-label"
-    >
-      <svg
-        aria-hidden={true}
-        className="MuiSvgIcon-root"
-        focusable="false"
-        style={
-          Object {
-            "color": "#4caf50",
-          }
-        }
-        viewBox="0 0 24 24"
-      >
-        <path
-          d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z"
-        />
-      </svg>
-    </span>
-  </button>
-  <button
-    className="MuiButtonBase-root MuiIconButton-root"
-    disabled={false}
-    onBlur={[Function]}
-    onClick={[Function]}
-    onDragLeave={[Function]}
-    onFocus={[Function]}
-    onKeyDown={[Function]}
-    onKeyUp={[Function]}
-    onMouseDown={[Function]}
-    onMouseLeave={[Function]}
-    onMouseUp={[Function]}
-    onTouchEnd={[Function]}
-    onTouchMove={[Function]}
-    onTouchStart={[Function]}
-    style={Object {}}
-    tabIndex={0}
-    type="button"
-  >
-    <span
-      className="MuiIconButton-label"
-    >
-      <svg
-        aria-hidden={true}
-        className="MuiSvgIcon-root"
-        focusable="false"
-        style={
-          Object {
-            "color": "#f44336",
-          }
-        }
-        viewBox="0 0 24 24"
-      >
-        <path
-          d="M20 12l-1.41-1.41L13 16.17V4h-2v12.17l-5.58-5.59L4 12l8 8 8-8z"
-        />
-      </svg>
-    </span>
-  </button>
-  <button
-    className="MuiButtonBase-root MuiIconButton-root"
-    disabled={false}
-    onBlur={[Function]}
-    onClick={[Function]}
-    onDragLeave={[Function]}
-    onFocus={[Function]}
-    onKeyDown={[Function]}
-    onKeyUp={[Function]}
-    onMouseDown={[Function]}
-    onMouseLeave={[Function]}
-    onMouseUp={[Function]}
-    onTouchEnd={[Function]}
-    onTouchMove={[Function]}
-    onTouchStart={[Function]}
-    tabIndex={0}
-    type="button"
-  >
-    <span
-      className="MuiIconButton-label"
-    >
-      <svg
-        aria-hidden={true}
-        className="MuiSvgIcon-root"
-        focusable="false"
-        viewBox="0 0 24 24"
-      >
-        <path
-          d="M7.41 18.59L8.83 20 12 16.83 15.17 20l1.41-1.41L12 14l-4.59 4.59zm9.18-13.18L15.17 4 12 7.17 8.83 4 7.41 5.41 12 10l4.59-4.59z"
-        />
-      </svg>
-    </span>
-  </button>
-</li>
-`;
-
-exports[`<SongItem {...{ song:
-   { artist: 'This is a test artist name',
-     song: 'This is a test song name',
-     duration: 556,
-     album: 'This is a test album name',
-     id: 1 },
-  voteButtons: true }}> renders correctly 1`] = `
-<li
-  className="MuiListItem-root MuiListItem-gutters"
-  disabled={false}
->
-  <div
-    className="MuiListItemText-root MuiListItemText-multiline"
-  >
-    <span
-      className="MuiTypography-root MuiListItemText-primary MuiTypography-body1 MuiTypography-noWrap MuiTypography-displayBlock"
-    >
-      This is a test song name
-    </span>
-    <p
-      className="MuiTypography-root MuiListItemText-secondary MuiTypography-body2 MuiTypography-colorTextSecondary MuiTypography-noWrap MuiTypography-displayBlock"
-    >
-      This is a test artist name - This is a test album name - 9:16
-    </p>
-  </div>
-  <button
-    className="MuiButtonBase-root MuiIconButton-root"
-    disabled={false}
-    onBlur={[Function]}
-    onClick={[Function]}
-    onDragLeave={[Function]}
-    onFocus={[Function]}
-    onKeyDown={[Function]}
-    onKeyUp={[Function]}
-    onMouseDown={[Function]}
-    onMouseLeave={[Function]}
-    onMouseUp={[Function]}
-    onTouchEnd={[Function]}
-    onTouchMove={[Function]}
-    onTouchStart={[Function]}
-    style={Object {}}
-    tabIndex={0}
-    type="button"
-  >
-    <span
-      className="MuiIconButton-label"
-    >
-      <svg
-        aria-hidden={true}
-        className="MuiSvgIcon-root"
-        focusable="false"
-        style={
-          Object {
-            "color": "#4caf50",
-          }
-        }
-        viewBox="0 0 24 24"
-      >
-        <path
-          d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z"
-        />
-      </svg>
-    </span>
-  </button>
-  <button
-    className="MuiButtonBase-root MuiIconButton-root"
-    disabled={false}
-    onBlur={[Function]}
-    onClick={[Function]}
-    onDragLeave={[Function]}
-    onFocus={[Function]}
-    onKeyDown={[Function]}
-    onKeyUp={[Function]}
-    onMouseDown={[Function]}
-    onMouseLeave={[Function]}
-    onMouseUp={[Function]}
-    onTouchEnd={[Function]}
-    onTouchMove={[Function]}
-    onTouchStart={[Function]}
-    style={Object {}}
-    tabIndex={0}
-    type="button"
-  >
-    <span
-      className="MuiIconButton-label"
-    >
-      <svg
-        aria-hidden={true}
-        className="MuiSvgIcon-root"
-        focusable="false"
-        style={
-          Object {
-            "color": "#f44336",
-          }
-        }
-        viewBox="0 0 24 24"
-      >
-        <path
-          d="M20 12l-1.41-1.41L13 16.17V4h-2v12.17l-5.58-5.59L4 12l8 8 8-8z"
-        />
-      </svg>
-    </span>
-  </button>
-  <button
-    className="MuiButtonBase-root MuiIconButton-root"
-    disabled={false}
-    onBlur={[Function]}
-    onClick={[Function]}
-    onDragLeave={[Function]}
-    onFocus={[Function]}
-    onKeyDown={[Function]}
-    onKeyUp={[Function]}
-    onMouseDown={[Function]}
-    onMouseLeave={[Function]}
-    onMouseUp={[Function]}
-    onTouchEnd={[Function]}
-    onTouchMove={[Function]}
-    onTouchStart={[Function]}
-    tabIndex={0}
-    type="button"
-  >
-    <span
-      className="MuiIconButton-label"
-    >
-      <svg
-        aria-hidden={true}
-        className="MuiSvgIcon-root"
-        focusable="false"
-        viewBox="0 0 24 24"
-      >
-        <path
-          d="M12 5.83L15.17 9l1.41-1.41L12 3 7.41 7.59 8.83 9 12 5.83zm0 12.34L8.83 15l-1.41 1.41L12 21l4.59-4.59L15.17 15 12 18.17z"
-        />
-      </svg>
-    </span>
-  </button>
-</li>
-`;
-
-exports[`<SongItem {...{ song:
-   { votes: 3,
-     artist: 'This is a test artist name',
-     song: 'This is a test song name',
-     duration: 556,
-     album: 'This is a test album name',
-     id: 1 } }}> renders correctly 1`] = `
+exports[`<SongItem /> basic rendering renders correctly with a voteful song 1`] = `
 <li
   className="MuiListItem-root MuiListItem-gutters"
   disabled={false}
@@ -507,14 +63,7 @@ exports[`<SongItem {...{ song:
 </li>
 `;
 
-exports[`<SongItem {...{ song:
-   { votes: 3,
-     artist: 'This is a test artist name',
-     song: 'This is a test song name',
-     duration: 556,
-     album: 'This is a test album name',
-     id: 1 },
-  unfolded: true }}> renders correctly 1`] = `
+exports[`<SongItem /> basic rendering renders correctly with a voteless song 1`] = `
 <li
   className="MuiListItem-root MuiListItem-gutters"
   disabled={false}
@@ -523,40 +72,16 @@ exports[`<SongItem {...{ song:
     className="MuiListItemText-root MuiListItemText-multiline"
   >
     <span
-      className="MuiTypography-root MuiListItemText-primary MuiTypography-body1 MuiTypography-displayBlock"
+      className="MuiTypography-root MuiListItemText-primary MuiTypography-body1 MuiTypography-noWrap MuiTypography-displayBlock"
     >
       This is a test song name
     </span>
-    <div
-      className="MuiTypography-root MuiListItemText-secondary MuiTypography-body2 MuiTypography-colorTextSecondary MuiTypography-displayBlock"
+    <p
+      className="MuiTypography-root MuiListItemText-secondary MuiTypography-body2 MuiTypography-colorTextSecondary MuiTypography-noWrap MuiTypography-displayBlock"
     >
-      <div>
-        <p
-          className="MuiTypography-root MuiTypography-body1"
-        >
-          Artist: 
-          This is a test artist name
-        </p>
-        <p
-          className="MuiTypography-root MuiTypography-body1"
-        >
-          Album: 
-          This is a test album name
-        </p>
-        <p
-          className="MuiTypography-root MuiTypography-body1"
-        >
-          Duration: 
-          9:16
-        </p>
-      </div>
-    </div>
+      This is a test artist name - This is a test album name - 9:16
+    </p>
   </div>
-  <p
-    className="MuiTypography-root MuiTypography-body1"
-  >
-    3
-  </p>
   <button
     className="MuiButtonBase-root MuiIconButton-root"
     disabled={false}
@@ -585,26 +110,15 @@ exports[`<SongItem {...{ song:
         viewBox="0 0 24 24"
       >
         <path
-          d="M7.41 18.59L8.83 20 12 16.83 15.17 20l1.41-1.41L12 14l-4.59 4.59zm9.18-13.18L15.17 4 12 7.17 8.83 4 7.41 5.41 12 10l4.59-4.59z"
+          d="M12 5.83L15.17 9l1.41-1.41L12 3 7.41 7.59 8.83 9 12 5.83zm0 12.34L8.83 15l-1.41 1.41L12 21l4.59-4.59L15.17 15 12 18.17z"
         />
       </svg>
     </span>
-    <span
-      className="MuiTouchRipple-root"
-    />
   </button>
 </li>
 `;
 
-exports[`<SongItem {...{ song:
-   { votes: 3,
-     artist: 'This is a test artist name',
-     song: 'This is a test song name',
-     duration: 556,
-     album: 'This is a test album name',
-     id: 1 },
-  unfolded: true,
-  voteButtons: true }}> renders correctly 1`] = `
+exports[`<SongItem /> interaction: voting decreases the number of votes by one when the downvote button is hit and POST request is successful 1`] = `
 <li
   className="MuiListItem-root MuiListItem-gutters"
   disabled={false}
@@ -613,34 +127,15 @@ exports[`<SongItem {...{ song:
     className="MuiListItemText-root MuiListItemText-multiline"
   >
     <span
-      className="MuiTypography-root MuiListItemText-primary MuiTypography-body1 MuiTypography-displayBlock"
+      className="MuiTypography-root MuiListItemText-primary MuiTypography-body1 MuiTypography-noWrap MuiTypography-displayBlock"
     >
       This is a test song name
     </span>
-    <div
-      className="MuiTypography-root MuiListItemText-secondary MuiTypography-body2 MuiTypography-colorTextSecondary MuiTypography-displayBlock"
+    <p
+      className="MuiTypography-root MuiListItemText-secondary MuiTypography-body2 MuiTypography-colorTextSecondary MuiTypography-noWrap MuiTypography-displayBlock"
     >
-      <div>
-        <p
-          className="MuiTypography-root MuiTypography-body1"
-        >
-          Artist: 
-          This is a test artist name
-        </p>
-        <p
-          className="MuiTypography-root MuiTypography-body1"
-        >
-          Album: 
-          This is a test album name
-        </p>
-        <p
-          className="MuiTypography-root MuiTypography-body1"
-        >
-          Duration: 
-          9:16
-        </p>
-      </div>
-    </div>
+      This is a test artist name - This is a test album name - 9:16
+    </p>
   </div>
   <button
     className="MuiButtonBase-root MuiIconButton-root"
@@ -687,7 +182,162 @@ exports[`<SongItem {...{ song:
   <p
     className="MuiTypography-root MuiTypography-body1"
   >
-    3
+    2
+  </p>
+  <button
+    className="MuiButtonBase-root MuiIconButton-root"
+    disabled={false}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onDragLeave={[Function]}
+    onFocus={[Function]}
+    onKeyDown={[Function]}
+    onKeyUp={[Function]}
+    onMouseDown={[Function]}
+    onMouseLeave={[Function]}
+    onMouseUp={[Function]}
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchStart={[Function]}
+    style={
+      Object {
+        "backgroundColor": "#ffcdd2",
+      }
+    }
+    tabIndex={0}
+    type="button"
+  >
+    <span
+      className="MuiIconButton-label"
+    >
+      <svg
+        aria-hidden={true}
+        className="MuiSvgIcon-root"
+        focusable="false"
+        style={
+          Object {
+            "color": "#f44336",
+          }
+        }
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M20 12l-1.41-1.41L13 16.17V4h-2v12.17l-5.58-5.59L4 12l8 8 8-8z"
+        />
+      </svg>
+    </span>
+    <span
+      className="MuiTouchRipple-root"
+    />
+  </button>
+  <button
+    className="MuiButtonBase-root MuiIconButton-root"
+    disabled={false}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onDragLeave={[Function]}
+    onFocus={[Function]}
+    onKeyDown={[Function]}
+    onKeyUp={[Function]}
+    onMouseDown={[Function]}
+    onMouseLeave={[Function]}
+    onMouseUp={[Function]}
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchStart={[Function]}
+    tabIndex={0}
+    type="button"
+  >
+    <span
+      className="MuiIconButton-label"
+    >
+      <svg
+        aria-hidden={true}
+        className="MuiSvgIcon-root"
+        focusable="false"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M12 5.83L15.17 9l1.41-1.41L12 3 7.41 7.59 8.83 9 12 5.83zm0 12.34L8.83 15l-1.41 1.41L12 21l4.59-4.59L15.17 15 12 18.17z"
+        />
+      </svg>
+    </span>
+    <span
+      className="MuiTouchRipple-root"
+    />
+  </button>
+</li>
+`;
+
+exports[`<SongItem /> interaction: voting increases the number of votes by one when the upvote button is hit and POST request is successful 1`] = `
+<li
+  className="MuiListItem-root MuiListItem-gutters"
+  disabled={false}
+>
+  <div
+    className="MuiListItemText-root MuiListItemText-multiline"
+  >
+    <span
+      className="MuiTypography-root MuiListItemText-primary MuiTypography-body1 MuiTypography-noWrap MuiTypography-displayBlock"
+    >
+      This is a test song name
+    </span>
+    <p
+      className="MuiTypography-root MuiListItemText-secondary MuiTypography-body2 MuiTypography-colorTextSecondary MuiTypography-noWrap MuiTypography-displayBlock"
+    >
+      This is a test artist name - This is a test album name - 9:16
+    </p>
+  </div>
+  <button
+    className="MuiButtonBase-root MuiIconButton-root"
+    disabled={false}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onDragLeave={[Function]}
+    onFocus={[Function]}
+    onKeyDown={[Function]}
+    onKeyUp={[Function]}
+    onMouseDown={[Function]}
+    onMouseLeave={[Function]}
+    onMouseUp={[Function]}
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchStart={[Function]}
+    style={
+      Object {
+        "backgroundColor": "#c8e6c9",
+      }
+    }
+    tabIndex={0}
+    type="button"
+  >
+    <span
+      className="MuiIconButton-label"
+    >
+      <svg
+        aria-hidden={true}
+        className="MuiSvgIcon-root"
+        focusable="false"
+        style={
+          Object {
+            "color": "#4caf50",
+          }
+        }
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z"
+        />
+      </svg>
+    </span>
+    <span
+      className="MuiTouchRipple-root"
+    />
+  </button>
+  <p
+    className="MuiTypography-root MuiTypography-body1"
+  >
+    4
   </p>
   <button
     className="MuiButtonBase-root MuiIconButton-root"
@@ -759,7 +409,7 @@ exports[`<SongItem {...{ song:
         viewBox="0 0 24 24"
       >
         <path
-          d="M7.41 18.59L8.83 20 12 16.83 15.17 20l1.41-1.41L12 14l-4.59 4.59zm9.18-13.18L15.17 4 12 7.17 8.83 4 7.41 5.41 12 10l4.59-4.59z"
+          d="M12 5.83L15.17 9l1.41-1.41L12 3 7.41 7.59 8.83 9 12 5.83zm0 12.34L8.83 15l-1.41 1.41L12 21l4.59-4.59L15.17 15 12 18.17z"
         />
       </svg>
     </span>
@@ -770,14 +420,81 @@ exports[`<SongItem {...{ song:
 </li>
 `;
 
-exports[`<SongItem {...{ song:
-   { votes: 3,
-     artist: 'This is a test artist name',
-     song: 'This is a test song name',
-     duration: 556,
-     album: 'This is a test album name',
-     id: 1 },
-  voteButtons: true }}> renders correctly 1`] = `
+exports[`<SongItem /> prop: unfolded renders correctly when unfolded by default 1`] = `
+<li
+  className="MuiListItem-root MuiListItem-gutters"
+  disabled={false}
+>
+  <div
+    className="MuiListItemText-root MuiListItemText-multiline"
+  >
+    <span
+      className="MuiTypography-root MuiListItemText-primary MuiTypography-body1 MuiTypography-displayBlock"
+    >
+      This is a test song name
+    </span>
+    <div
+      className="MuiTypography-root MuiListItemText-secondary MuiTypography-body2 MuiTypography-colorTextSecondary MuiTypography-displayBlock"
+    >
+      <div>
+        <p
+          className="MuiTypography-root MuiTypography-body1"
+        >
+          Artist: 
+          This is a test artist name
+        </p>
+        <p
+          className="MuiTypography-root MuiTypography-body1"
+        >
+          Album: 
+          This is a test album name
+        </p>
+        <p
+          className="MuiTypography-root MuiTypography-body1"
+        >
+          Duration: 
+          9:16
+        </p>
+      </div>
+    </div>
+  </div>
+  <button
+    className="MuiButtonBase-root MuiIconButton-root"
+    disabled={false}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onDragLeave={[Function]}
+    onFocus={[Function]}
+    onKeyDown={[Function]}
+    onKeyUp={[Function]}
+    onMouseDown={[Function]}
+    onMouseLeave={[Function]}
+    onMouseUp={[Function]}
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchStart={[Function]}
+    tabIndex={0}
+    type="button"
+  >
+    <span
+      className="MuiIconButton-label"
+    >
+      <svg
+        aria-hidden={true}
+        className="MuiSvgIcon-root"
+        focusable="false"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M7.41 18.59L8.83 20 12 16.83 15.17 20l1.41-1.41L12 14l-4.59 4.59zm9.18-13.18L15.17 4 12 7.17 8.83 4 7.41 5.41 12 10l4.59-4.59z"
+        />
+      </svg>
+    </span>
+  </button>
+</li>
+`;
+
+exports[`<SongItem /> prop: voteButtons renders correctly with a voteful song and vote buttons 1`] = `
 <li
   className="MuiListItem-root MuiListItem-gutters"
   disabled={false}
@@ -920,6 +637,139 @@ exports[`<SongItem {...{ song:
     <span
       className="MuiTouchRipple-root"
     />
+  </button>
+</li>
+`;
+
+exports[`<SongItem /> prop: voteButtons renders correctly with a voteless song and vote buttons 1`] = `
+<li
+  className="MuiListItem-root MuiListItem-gutters"
+  disabled={false}
+>
+  <div
+    className="MuiListItemText-root MuiListItemText-multiline"
+  >
+    <span
+      className="MuiTypography-root MuiListItemText-primary MuiTypography-body1 MuiTypography-noWrap MuiTypography-displayBlock"
+    >
+      This is a test song name
+    </span>
+    <p
+      className="MuiTypography-root MuiListItemText-secondary MuiTypography-body2 MuiTypography-colorTextSecondary MuiTypography-noWrap MuiTypography-displayBlock"
+    >
+      This is a test artist name - This is a test album name - 9:16
+    </p>
+  </div>
+  <button
+    className="MuiButtonBase-root MuiIconButton-root"
+    disabled={false}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onDragLeave={[Function]}
+    onFocus={[Function]}
+    onKeyDown={[Function]}
+    onKeyUp={[Function]}
+    onMouseDown={[Function]}
+    onMouseLeave={[Function]}
+    onMouseUp={[Function]}
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchStart={[Function]}
+    style={Object {}}
+    tabIndex={0}
+    type="button"
+  >
+    <span
+      className="MuiIconButton-label"
+    >
+      <svg
+        aria-hidden={true}
+        className="MuiSvgIcon-root"
+        focusable="false"
+        style={
+          Object {
+            "color": "#4caf50",
+          }
+        }
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z"
+        />
+      </svg>
+    </span>
+  </button>
+  <button
+    className="MuiButtonBase-root MuiIconButton-root"
+    disabled={false}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onDragLeave={[Function]}
+    onFocus={[Function]}
+    onKeyDown={[Function]}
+    onKeyUp={[Function]}
+    onMouseDown={[Function]}
+    onMouseLeave={[Function]}
+    onMouseUp={[Function]}
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchStart={[Function]}
+    style={Object {}}
+    tabIndex={0}
+    type="button"
+  >
+    <span
+      className="MuiIconButton-label"
+    >
+      <svg
+        aria-hidden={true}
+        className="MuiSvgIcon-root"
+        focusable="false"
+        style={
+          Object {
+            "color": "#f44336",
+          }
+        }
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M20 12l-1.41-1.41L13 16.17V4h-2v12.17l-5.58-5.59L4 12l8 8 8-8z"
+        />
+      </svg>
+    </span>
+  </button>
+  <button
+    className="MuiButtonBase-root MuiIconButton-root"
+    disabled={false}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onDragLeave={[Function]}
+    onFocus={[Function]}
+    onKeyDown={[Function]}
+    onKeyUp={[Function]}
+    onMouseDown={[Function]}
+    onMouseLeave={[Function]}
+    onMouseUp={[Function]}
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchStart={[Function]}
+    tabIndex={0}
+    type="button"
+  >
+    <span
+      className="MuiIconButton-label"
+    >
+      <svg
+        aria-hidden={true}
+        className="MuiSvgIcon-root"
+        focusable="false"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M12 5.83L15.17 9l1.41-1.41L12 3 7.41 7.59 8.83 9 12 5.83zm0 12.34L8.83 15l-1.41 1.41L12 21l4.59-4.59L15.17 15 12 18.17z"
+        />
+      </svg>
+    </span>
   </button>
 </li>
 `;
