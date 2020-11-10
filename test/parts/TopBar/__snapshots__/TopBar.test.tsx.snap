@@ -1,0 +1,1063 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TopBar /> prop: currTab renders correctly with valid tab and subtab name 1`] = `
+<header
+  className="MuiPaper-root MuiAppBar-root MuiAppBar-positionStatic MuiAppBar-colorPrimary MuiPaper-elevation4"
+>
+  <div
+    className="MuiTabs-root"
+  >
+    <div
+      aria-disabled={false}
+      className="MuiButtonBase-root MuiTabScrollButton-root MuiTabs-scrollButtons Mui-disabled"
+      onBlur={[Function]}
+      onClick={[Function]}
+      onDragLeave={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      onMouseDown={[Function]}
+      onMouseLeave={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      role={null}
+      tabIndex={null}
+    >
+      <svg
+        aria-hidden={true}
+        className="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall"
+        focusable="false"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M15.41 16.09l-4.58-4.59 4.58-4.59L14 5.5l-6 6 6 6z"
+        />
+      </svg>
+    </div>
+    <div
+      className="MuiTabs-scrollable"
+      style={
+        Object {
+          "height": 99,
+          "overflow": "scroll",
+          "position": "absolute",
+          "top": -9999,
+          "width": 99,
+        }
+      }
+    />
+    <div
+      className="MuiTabs-scroller MuiTabs-scrollable"
+      onScroll={[Function]}
+      style={
+        Object {
+          "marginBottom": null,
+          "overflow": "hidden",
+        }
+      }
+    >
+      <div
+        className="MuiTabs-flexContainer"
+        onKeyDown={[Function]}
+        role="tablist"
+      >
+        <button
+          aria-selected={false}
+          className="MuiButtonBase-root MuiTab-root MuiTab-textColorInherit"
+          disabled={false}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onDragLeave={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          role="tab"
+          tabIndex={-1}
+          type="button"
+        >
+          <span
+            className="MuiTab-wrapper"
+          >
+            Test tab name 1
+          </span>
+        </button>
+        <button
+          aria-selected={true}
+          className="MuiButtonBase-root MuiTab-root MuiTab-textColorInherit Mui-selected"
+          disabled={false}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onDragLeave={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          role="tab"
+          tabIndex={0}
+          type="button"
+        >
+          <span
+            className="MuiTab-wrapper"
+          >
+            Test tab name 2
+          </span>
+          <span
+            className="PrivateTabIndicator-root-5 PrivateTabIndicator-colorSecondary-7 MuiTabs-indicator"
+            style={Object {}}
+          />
+        </button>
+        <button
+          aria-selected={false}
+          className="MuiButtonBase-root MuiTab-root MuiTab-textColorInherit"
+          disabled={false}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onDragLeave={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          role="tab"
+          tabIndex={-1}
+          type="button"
+        >
+          <span
+            className="MuiTab-wrapper"
+          >
+            Test tab name 3
+          </span>
+        </button>
+      </div>
+    </div>
+    <div
+      aria-disabled={false}
+      className="MuiButtonBase-root MuiTabScrollButton-root MuiTabs-scrollButtons Mui-disabled"
+      onBlur={[Function]}
+      onClick={[Function]}
+      onDragLeave={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      onMouseDown={[Function]}
+      onMouseLeave={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      role={null}
+      tabIndex={null}
+    >
+      <svg
+        aria-hidden={true}
+        className="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall"
+        focusable="false"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M8.59 16.34l4.58-4.59-4.58-4.59L10 5.75l6 6-6 6z"
+        />
+      </svg>
+    </div>
+  </div>
+  <div
+    className="MuiPaper-root MuiPaper-elevation1 MuiPaper-rounded"
+  >
+    <div
+      className="MuiTabs-root"
+    >
+      <div
+        aria-disabled={false}
+        className="MuiButtonBase-root MuiTabScrollButton-root MuiTabs-scrollButtons Mui-disabled"
+        onBlur={[Function]}
+        onClick={[Function]}
+        onDragLeave={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        onMouseDown={[Function]}
+        onMouseLeave={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        role={null}
+        tabIndex={null}
+      >
+        <svg
+          aria-hidden={true}
+          className="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall"
+          focusable="false"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M15.41 16.09l-4.58-4.59 4.58-4.59L14 5.5l-6 6 6 6z"
+          />
+        </svg>
+      </div>
+      <div
+        className="MuiTabs-scrollable"
+        style={
+          Object {
+            "height": 99,
+            "overflow": "scroll",
+            "position": "absolute",
+            "top": -9999,
+            "width": 99,
+          }
+        }
+      />
+      <div
+        className="MuiTabs-scroller MuiTabs-scrollable"
+        onScroll={[Function]}
+        style={
+          Object {
+            "marginBottom": null,
+            "overflow": "hidden",
+          }
+        }
+      >
+        <div
+          className="MuiTabs-flexContainer"
+          onKeyDown={[Function]}
+          role="tablist"
+        >
+          <button
+            aria-selected={false}
+            className="MuiButtonBase-root MuiTab-root MuiTab-textColorInherit"
+            disabled={false}
+            onBlur={[Function]}
+            onClick={[Function]}
+            onDragLeave={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseLeave={[Function]}
+            onMouseUp={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            role="tab"
+            tabIndex={-1}
+            type="button"
+          >
+            <span
+              className="MuiTab-wrapper"
+            >
+              Test subtab name 1
+            </span>
+          </button>
+          <button
+            aria-selected={true}
+            className="MuiButtonBase-root MuiTab-root MuiTab-textColorInherit Mui-selected"
+            disabled={false}
+            onBlur={[Function]}
+            onClick={[Function]}
+            onDragLeave={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseLeave={[Function]}
+            onMouseUp={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            role="tab"
+            tabIndex={0}
+            type="button"
+          >
+            <span
+              className="MuiTab-wrapper"
+            >
+              Test subtab name 2
+            </span>
+            <span
+              className="PrivateTabIndicator-root-5 PrivateTabIndicator-colorSecondary-7 MuiTabs-indicator"
+              style={Object {}}
+            />
+          </button>
+          <button
+            aria-selected={false}
+            className="MuiButtonBase-root MuiTab-root MuiTab-textColorInherit"
+            disabled={false}
+            onBlur={[Function]}
+            onClick={[Function]}
+            onDragLeave={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseLeave={[Function]}
+            onMouseUp={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            role="tab"
+            tabIndex={-1}
+            type="button"
+          >
+            <span
+              className="MuiTab-wrapper"
+            >
+              Test subtab name 3
+            </span>
+          </button>
+        </div>
+      </div>
+      <div
+        aria-disabled={false}
+        className="MuiButtonBase-root MuiTabScrollButton-root MuiTabs-scrollButtons Mui-disabled"
+        onBlur={[Function]}
+        onClick={[Function]}
+        onDragLeave={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        onMouseDown={[Function]}
+        onMouseLeave={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        role={null}
+        tabIndex={null}
+      >
+        <svg
+          aria-hidden={true}
+          className="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall"
+          focusable="false"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M8.59 16.34l4.58-4.59-4.58-4.59L10 5.75l6 6-6 6z"
+          />
+        </svg>
+      </div>
+    </div>
+  </div>
+</header>
+`;
+
+exports[`<TopBar /> prop: currTab renders correctly with valid tab name 1`] = `
+<header
+  className="MuiPaper-root MuiAppBar-root MuiAppBar-positionStatic MuiAppBar-colorPrimary MuiPaper-elevation4"
+>
+  <div
+    className="MuiTabs-root"
+  >
+    <div
+      aria-disabled={false}
+      className="MuiButtonBase-root MuiTabScrollButton-root MuiTabs-scrollButtons Mui-disabled"
+      onBlur={[Function]}
+      onClick={[Function]}
+      onDragLeave={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      onMouseDown={[Function]}
+      onMouseLeave={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      role={null}
+      tabIndex={null}
+    >
+      <svg
+        aria-hidden={true}
+        className="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall"
+        focusable="false"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M15.41 16.09l-4.58-4.59 4.58-4.59L14 5.5l-6 6 6 6z"
+        />
+      </svg>
+    </div>
+    <div
+      className="MuiTabs-scrollable"
+      style={
+        Object {
+          "height": 99,
+          "overflow": "scroll",
+          "position": "absolute",
+          "top": -9999,
+          "width": 99,
+        }
+      }
+    />
+    <div
+      className="MuiTabs-scroller MuiTabs-scrollable"
+      onScroll={[Function]}
+      style={
+        Object {
+          "marginBottom": null,
+          "overflow": "hidden",
+        }
+      }
+    >
+      <div
+        className="MuiTabs-flexContainer"
+        onKeyDown={[Function]}
+        role="tablist"
+      >
+        <button
+          aria-selected={false}
+          className="MuiButtonBase-root MuiTab-root MuiTab-textColorInherit"
+          disabled={false}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onDragLeave={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          role="tab"
+          tabIndex={-1}
+          type="button"
+        >
+          <span
+            className="MuiTab-wrapper"
+          >
+            Test tab name 1
+          </span>
+        </button>
+        <button
+          aria-selected={true}
+          className="MuiButtonBase-root MuiTab-root MuiTab-textColorInherit Mui-selected"
+          disabled={false}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onDragLeave={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          role="tab"
+          tabIndex={0}
+          type="button"
+        >
+          <span
+            className="MuiTab-wrapper"
+          >
+            Test tab name 2
+          </span>
+          <span
+            className="PrivateTabIndicator-root-1 PrivateTabIndicator-colorSecondary-3 MuiTabs-indicator"
+            style={Object {}}
+          />
+        </button>
+        <button
+          aria-selected={false}
+          className="MuiButtonBase-root MuiTab-root MuiTab-textColorInherit"
+          disabled={false}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onDragLeave={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          role="tab"
+          tabIndex={-1}
+          type="button"
+        >
+          <span
+            className="MuiTab-wrapper"
+          >
+            Test tab name 3
+          </span>
+        </button>
+      </div>
+    </div>
+    <div
+      aria-disabled={false}
+      className="MuiButtonBase-root MuiTabScrollButton-root MuiTabs-scrollButtons Mui-disabled"
+      onBlur={[Function]}
+      onClick={[Function]}
+      onDragLeave={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      onMouseDown={[Function]}
+      onMouseLeave={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      role={null}
+      tabIndex={null}
+    >
+      <svg
+        aria-hidden={true}
+        className="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall"
+        focusable="false"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M8.59 16.34l4.58-4.59-4.58-4.59L10 5.75l6 6-6 6z"
+        />
+      </svg>
+    </div>
+  </div>
+</header>
+`;
+
+exports[`<TopBar /> prop: subTabNames renders with a subtab bar 1`] = `
+<header
+  className="MuiPaper-root MuiAppBar-root MuiAppBar-positionStatic MuiAppBar-colorPrimary MuiPaper-elevation4"
+>
+  <div
+    className="MuiTabs-root"
+  >
+    <div
+      aria-disabled={false}
+      className="MuiButtonBase-root MuiTabScrollButton-root MuiTabs-scrollButtons Mui-disabled"
+      onBlur={[Function]}
+      onClick={[Function]}
+      onDragLeave={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      onMouseDown={[Function]}
+      onMouseLeave={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      role={null}
+      tabIndex={null}
+    >
+      <svg
+        aria-hidden={true}
+        className="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall"
+        focusable="false"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M15.41 16.09l-4.58-4.59 4.58-4.59L14 5.5l-6 6 6 6z"
+        />
+      </svg>
+    </div>
+    <div
+      className="MuiTabs-scrollable"
+      style={
+        Object {
+          "height": 99,
+          "overflow": "scroll",
+          "position": "absolute",
+          "top": -9999,
+          "width": 99,
+        }
+      }
+    />
+    <div
+      className="MuiTabs-scroller MuiTabs-scrollable"
+      onScroll={[Function]}
+      style={
+        Object {
+          "marginBottom": null,
+          "overflow": "hidden",
+        }
+      }
+    >
+      <div
+        className="MuiTabs-flexContainer"
+        onKeyDown={[Function]}
+        role="tablist"
+      >
+        <button
+          aria-selected={false}
+          className="MuiButtonBase-root MuiTab-root MuiTab-textColorInherit"
+          disabled={false}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onDragLeave={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          role="tab"
+          tabIndex={-1}
+          type="button"
+        >
+          <span
+            className="MuiTab-wrapper"
+          >
+            Test tab name 1
+          </span>
+        </button>
+        <button
+          aria-selected={false}
+          className="MuiButtonBase-root MuiTab-root MuiTab-textColorInherit"
+          disabled={false}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onDragLeave={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          role="tab"
+          tabIndex={-1}
+          type="button"
+        >
+          <span
+            className="MuiTab-wrapper"
+          >
+            Test tab name 2
+          </span>
+        </button>
+        <button
+          aria-selected={false}
+          className="MuiButtonBase-root MuiTab-root MuiTab-textColorInherit"
+          disabled={false}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onDragLeave={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          role="tab"
+          tabIndex={-1}
+          type="button"
+        >
+          <span
+            className="MuiTab-wrapper"
+          >
+            Test tab name 3
+          </span>
+        </button>
+      </div>
+    </div>
+    <div
+      aria-disabled={false}
+      className="MuiButtonBase-root MuiTabScrollButton-root MuiTabs-scrollButtons Mui-disabled"
+      onBlur={[Function]}
+      onClick={[Function]}
+      onDragLeave={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      onMouseDown={[Function]}
+      onMouseLeave={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      role={null}
+      tabIndex={null}
+    >
+      <svg
+        aria-hidden={true}
+        className="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall"
+        focusable="false"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M8.59 16.34l4.58-4.59-4.58-4.59L10 5.75l6 6-6 6z"
+        />
+      </svg>
+    </div>
+  </div>
+  <div
+    className="MuiPaper-root MuiPaper-elevation1 MuiPaper-rounded"
+  >
+    <div
+      className="MuiTabs-root"
+    >
+      <div
+        aria-disabled={false}
+        className="MuiButtonBase-root MuiTabScrollButton-root MuiTabs-scrollButtons Mui-disabled"
+        onBlur={[Function]}
+        onClick={[Function]}
+        onDragLeave={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        onMouseDown={[Function]}
+        onMouseLeave={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        role={null}
+        tabIndex={null}
+      >
+        <svg
+          aria-hidden={true}
+          className="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall"
+          focusable="false"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M15.41 16.09l-4.58-4.59 4.58-4.59L14 5.5l-6 6 6 6z"
+          />
+        </svg>
+      </div>
+      <div
+        className="MuiTabs-scrollable"
+        style={
+          Object {
+            "height": 99,
+            "overflow": "scroll",
+            "position": "absolute",
+            "top": -9999,
+            "width": 99,
+          }
+        }
+      />
+      <div
+        className="MuiTabs-scroller MuiTabs-scrollable"
+        onScroll={[Function]}
+        style={
+          Object {
+            "marginBottom": null,
+            "overflow": "hidden",
+          }
+        }
+      >
+        <div
+          className="MuiTabs-flexContainer"
+          onKeyDown={[Function]}
+          role="tablist"
+        >
+          <button
+            aria-selected={false}
+            className="MuiButtonBase-root MuiTab-root MuiTab-textColorInherit"
+            disabled={false}
+            onBlur={[Function]}
+            onClick={[Function]}
+            onDragLeave={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseLeave={[Function]}
+            onMouseUp={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            role="tab"
+            tabIndex={-1}
+            type="button"
+          >
+            <span
+              className="MuiTab-wrapper"
+            >
+              Test subtab name 1
+            </span>
+          </button>
+          <button
+            aria-selected={false}
+            className="MuiButtonBase-root MuiTab-root MuiTab-textColorInherit"
+            disabled={false}
+            onBlur={[Function]}
+            onClick={[Function]}
+            onDragLeave={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseLeave={[Function]}
+            onMouseUp={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            role="tab"
+            tabIndex={-1}
+            type="button"
+          >
+            <span
+              className="MuiTab-wrapper"
+            >
+              Test subtab name 2
+            </span>
+          </button>
+          <button
+            aria-selected={false}
+            className="MuiButtonBase-root MuiTab-root MuiTab-textColorInherit"
+            disabled={false}
+            onBlur={[Function]}
+            onClick={[Function]}
+            onDragLeave={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseLeave={[Function]}
+            onMouseUp={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            role="tab"
+            tabIndex={-1}
+            type="button"
+          >
+            <span
+              className="MuiTab-wrapper"
+            >
+              Test subtab name 3
+            </span>
+          </button>
+        </div>
+      </div>
+      <div
+        aria-disabled={false}
+        className="MuiButtonBase-root MuiTabScrollButton-root MuiTabs-scrollButtons Mui-disabled"
+        onBlur={[Function]}
+        onClick={[Function]}
+        onDragLeave={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        onMouseDown={[Function]}
+        onMouseLeave={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        role={null}
+        tabIndex={null}
+      >
+        <svg
+          aria-hidden={true}
+          className="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall"
+          focusable="false"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M8.59 16.34l4.58-4.59-4.58-4.59L10 5.75l6 6-6 6z"
+          />
+        </svg>
+      </div>
+    </div>
+  </div>
+</header>
+`;
+
+exports[`<TopBar /> renders correctly 1`] = `
+<header
+  className="MuiPaper-root MuiAppBar-root MuiAppBar-positionStatic MuiAppBar-colorPrimary MuiPaper-elevation4"
+>
+  <div
+    className="MuiTabs-root"
+  >
+    <div
+      aria-disabled={false}
+      className="MuiButtonBase-root MuiTabScrollButton-root MuiTabs-scrollButtons Mui-disabled"
+      onBlur={[Function]}
+      onClick={[Function]}
+      onDragLeave={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      onMouseDown={[Function]}
+      onMouseLeave={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      role={null}
+      tabIndex={null}
+    >
+      <svg
+        aria-hidden={true}
+        className="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall"
+        focusable="false"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M15.41 16.09l-4.58-4.59 4.58-4.59L14 5.5l-6 6 6 6z"
+        />
+      </svg>
+    </div>
+    <div
+      className="MuiTabs-scrollable"
+      style={
+        Object {
+          "height": 99,
+          "overflow": "scroll",
+          "position": "absolute",
+          "top": -9999,
+          "width": 99,
+        }
+      }
+    />
+    <div
+      className="MuiTabs-scroller MuiTabs-scrollable"
+      onScroll={[Function]}
+      style={
+        Object {
+          "marginBottom": null,
+          "overflow": "hidden",
+        }
+      }
+    >
+      <div
+        className="MuiTabs-flexContainer"
+        onKeyDown={[Function]}
+        role="tablist"
+      >
+        <button
+          aria-selected={false}
+          className="MuiButtonBase-root MuiTab-root MuiTab-textColorInherit"
+          disabled={false}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onDragLeave={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          role="tab"
+          tabIndex={-1}
+          type="button"
+        >
+          <span
+            className="MuiTab-wrapper"
+          >
+            Test tab name 1
+          </span>
+        </button>
+        <button
+          aria-selected={false}
+          className="MuiButtonBase-root MuiTab-root MuiTab-textColorInherit"
+          disabled={false}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onDragLeave={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          role="tab"
+          tabIndex={-1}
+          type="button"
+        >
+          <span
+            className="MuiTab-wrapper"
+          >
+            Test tab name 2
+          </span>
+        </button>
+        <button
+          aria-selected={false}
+          className="MuiButtonBase-root MuiTab-root MuiTab-textColorInherit"
+          disabled={false}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onDragLeave={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          role="tab"
+          tabIndex={-1}
+          type="button"
+        >
+          <span
+            className="MuiTab-wrapper"
+          >
+            Test tab name 3
+          </span>
+        </button>
+      </div>
+    </div>
+    <div
+      aria-disabled={false}
+      className="MuiButtonBase-root MuiTabScrollButton-root MuiTabs-scrollButtons Mui-disabled"
+      onBlur={[Function]}
+      onClick={[Function]}
+      onDragLeave={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      onMouseDown={[Function]}
+      onMouseLeave={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      role={null}
+      tabIndex={null}
+    >
+      <svg
+        aria-hidden={true}
+        className="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall"
+        focusable="false"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M8.59 16.34l4.58-4.59-4.58-4.59L10 5.75l6 6-6 6z"
+        />
+      </svg>
+    </div>
+  </div>
+</header>
+`;
