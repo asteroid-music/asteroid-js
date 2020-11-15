@@ -1,6 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import SongItem, {SongInterface} from '../../../src/components/SongItem';
+import SongItem, {SongInterface} from 'components/SongItem';
 import axios from 'axios';
 import { serialize as serialise } from 'jest-snapshot/build/utils';
 //I know, UK vs US spelling...

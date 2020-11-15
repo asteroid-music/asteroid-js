@@ -31,6 +31,6 @@ const tabs = new TabArray([
 ]);
 
 ReactDOM.render(
-    React.createElement(App, {tabs: tabs, currTab: "Voting", currSubTab: "Queue"}, null),
+    React.createElement(App, {tabs: tabs}, null),
     document.getElementById('root')
 );

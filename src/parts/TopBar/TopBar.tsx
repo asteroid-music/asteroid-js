@@ -6,70 +6,69 @@ import Tabs from '@material-ui/core/Tabs';
 import AppBar from '@material-ui/core/AppBar';
 import Tab from '@material-ui/core/Tab';
 import Paper from '@material-ui/core/Paper';
+import Drawer from '@material-ui/core/Drawer';
+
+//Imports from external module 'react-router'
+import { withRouter } from 'react-router-dom';
 
 //Imports from local folder
 import TopBarProps from './Props';
+import TopBarState from './State';
+
+//Imports from local 'parts'
+import SideBar from 'parts/SideBar';
 
 /**
  * <TopBar> React component for navigating Asteroid.
  * Creates a bar at the top of the screen with buttons to access tabs and
  *      subtabs
- *
- * @param {`parts/TopBar/Props/TopBarProps`} props: the React props for the
- *      component
  */
-function TopBar(props: TopBarProps) {
-    //Name of the current subtab, iff it exists in the current tab
-    let currSubTab = props.subTabNames?.includes(props.currSubTab)
-        && props.currSubTab;
+class TopBar extends React.Component<TopBarProps,TopBarState> {
+    constructor(props) {
+        super(props);
+        this.state = {
+            sidebarOpen: false,
+            sidebarName: "",
+            sidebarSubtabs: []
+        };
+    }
 
-    return (
-        <AppBar position="static">
-            {/*Main tab bar*/}
-            <Tabs
-                value={props.currTab || false}
-                onChange={
-                    (event: React.ChangeEvent<{}>, value: string) => {
-                        props.tabCallback(event,value);
-                    }
-                }
-                variant="scrollable"
-                scrollButtons="on"
-            >
-                {props.tabNames.map((tabName: string) => {
-                    return <Tab
-                        key={tabName}
-                        value={tabName}
-                        label={tabName}
-                    />
-                })}
-            </Tabs>
-            {/*Fold-out sub-tab bar*/}
-            {props.subTabNames &&
-                <Paper>
-                    <Tabs
-                        value={currSubTab}
-                        onChange={
-                            (event: React.ChangeEvent<{}>, value: string) => {
-                                props.subTabCallback(event,value);
-                            }
+    render() {
+        let location: string | undefined = this.props.location.pathname.split("/")[1];
+        return (
+            <AppBar position="static">
+                {/*Main tab bar*/}
+                <Tabs
+                    value={location || false}
+                    onChange={
+                        (event: React.ChangeEvent<{}>, value: string) => {
+                            this.setState({
+                                sidebarOpen: true,
+                                sidebarName: value,
+                                sidebarSubtabs: this.props.tabs.get(value)?.nameList() || []
+                            });
                         }
-                        indicatorColor="secondary"
-                        variant="scrollable"
-                        scrollButtons="on"
-                    >
-                        {props.subTabNames.map((subTabName: string) => {
-                            return <Tab
-                                key={subTabName}
-                                value={subTabName}
-                                label={subTabName}
-                            />
-                        })}
-                    </Tabs>
-                </Paper>
-            }
-        </AppBar>
-    );
+                    }
+                    variant="scrollable"
+                    scrollButtons="on"
+                >
+                    {this.props.tabs.nameList().map((tabName: string) => {
+                        return <Tab
+                            key={tabName}
+                            value={tabName}
+                            label={tabName}
+                        />
+                    })}
+                </Tabs>
+                <SideBar
+                    open={this.state.sidebarOpen}
+                    tabName={this.state.sidebarName}
+                    linkNames={this.state.sidebarSubtabs}
+                    closeCallback={()=>{this.setState({sidebarOpen: false});}}
+                />
+            </AppBar>
+        );
+    }
 }
 
-export default TopBar;
+export default withRouter(TopBar);
