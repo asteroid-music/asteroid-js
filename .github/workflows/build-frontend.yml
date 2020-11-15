@@ -5,13 +5,16 @@ on:
     branches: [ master ]
 
 jobs:
-  # vue build
-  build:
+  # react build and test
+  buildtest:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
     - run: |
         npm i
+    - name: Running Tests
+      run: |
+        npm run test
     - name: Running Build
       run: |
         npm run build
@@ -21,6 +24,3 @@ jobs:
         name: dist
         path: /home/runner/work/asteroid-js/asteroid-js/dist
         if-no-files-found: error
-    - name: Running Tests
-      run: |
-        npm run test
