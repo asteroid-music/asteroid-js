@@ -71,7 +71,7 @@ class AsteroidSongList extends React.Component<{},SongListState> {
                 //Sort by number of votes
                 listInfoItem = <List>
                     {musicData.map((jsonitem: SongInterface) => {
-                        return <SongItem key={jsonitem.id} song={jsonitem} voteButtons/>
+                        return <SongItem key={jsonitem._id} song={jsonitem} voteButtons/>
                     })}
                 </List>
                 refreshButtonOrNull = refreshButton;

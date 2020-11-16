@@ -18,7 +18,7 @@ interface SongInterface {
     album: string,
 
     /** Unique ID that the song is stored under in the backend database */
-    id: number,
+    _id: string,
 
     /**
      * Number of votes cast for the particular song.
