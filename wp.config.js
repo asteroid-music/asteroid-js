@@ -1,4 +1,6 @@
-const HTMLWebpackPlugin = require('html-webpack-plugin')
+const HTMLWebpackPlugin = require('html-webpack-plugin');
+const webpack = require('webpack');
+const config = require('./asteroid.config.js');
 var path = require('path');
 
 const WebpackConfig = {
@@ -8,6 +10,9 @@ const WebpackConfig = {
             template: "src/index.html",
             filename: "index.html",
             favicon: "src/favicon.png"
+        }),
+        new webpack.DefinePlugin({
+            __config__: JSON.stringify(config)
         })
     ],
     module: {

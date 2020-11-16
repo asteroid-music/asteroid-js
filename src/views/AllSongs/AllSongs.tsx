@@ -5,7 +5,7 @@ import Container from '@material-ui/core/Container';
 import List from '@material-ui/core/List';
 import Button from '@material-ui/core/Button';
 import CircularProgress from '@material-ui/core/CircularProgress';
-import axios from 'axios';
+import axios from 'utils/axios';
 
 //Relative local imports
 import SongItem, { SongInterface } from 'components/SongItem'

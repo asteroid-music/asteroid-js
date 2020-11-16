@@ -4,6 +4,8 @@ const jestConfig = {
         "^.+\\.tsx?$": "ts-jest"
     },
     globals: {
+        "__config__":{
+        },
         "ts-jest": {
             diagnostics: {
                 ignoreCodes: [6059,18002,18003,2307]

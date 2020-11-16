@@ -19,7 +19,7 @@ import UnfoldLess from '@material-ui/icons/UnfoldLess';
 import IconButton from '@material-ui/core/IconButton';
 
 //Import from external 'axios' module
-import axios from 'axios';
+import axios from 'utils/axios';
 
 //Imports from local directory
 import SongInterface from './SongInterface';

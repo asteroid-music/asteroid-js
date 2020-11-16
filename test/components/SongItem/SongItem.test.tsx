@@ -1,7 +1,7 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 import SongItem, {SongInterface} from 'components/SongItem';
-import axios from 'axios';
+import axios from 'utils/axios';
 import { serialize as serialise } from 'jest-snapshot/build/utils';
 //I know, UK vs US spelling...
 
