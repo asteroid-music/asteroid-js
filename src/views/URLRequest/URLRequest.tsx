@@ -38,7 +38,7 @@ class AsteroidURLRequester extends React.Component<{},RequesterState> {
     makeRequest() {
         const url = this.state.url;
         this.setState({requestBeingMade: true});
-        axios.post<PostResponse>("/music/songs",{url:url}).then(
+        axios.post<PostResponse>("/music/songs?url="+url,{}).then(
             (response) => {
                 const message: string = response?.data?.message;
                 const song = response?.data?.song && <SongItem song={response.data.song} unfolded />;

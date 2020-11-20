@@ -55,11 +55,9 @@ class SongItem extends React.Component<SongItemProps,SongItemState> {
     }
 
     _vote(value: number) {
-        let voteState = this.state.voteState;
-        axios.post<{message: string}>("/queue",{
-            id: this.props.song?._id,
-            vote: value
-        }).catch(
+        const voteState = this.state.voteState;
+        const postUrl="/queue?song_id="+this.props.song._id+"&vote="+value;
+        axios.post<{message: string}>(postUrl,{}).catch(
             (error) => {
                 this.setState({voteState:voteState});
             }

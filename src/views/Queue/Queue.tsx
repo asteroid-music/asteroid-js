@@ -19,6 +19,22 @@ interface QueueState {
 }
 
 /**
+ * Interface for a single song in the new queue format
+ */
+interface queueItemInterface {
+    song: SongInterface,
+    votes: number
+}
+
+/**
+ * Interface for a GET request to /queue/
+ */
+interface queueGetInterface {
+    name: string,
+    songs: queueItemInterface[]
+}
+
+/**
  * <AsteroidQueue> component for main body
  */
 class AsteroidQueue extends React.Component<{},QueueState> {
@@ -29,10 +45,13 @@ class AsteroidQueue extends React.Component<{},QueueState> {
     }
 
     _refreshQueue() {
-        axios.get<SongInterface[]>("/queue").then(
+        axios.get<queueGetInterface>("/queue/").then(
             (response) => {
                 this.setState({
-                    queueData: response.data
+                    queueData: response.data.songs.map(item=>{
+                        item.song.votes = item.votes;
+                        return item.song;
+                    })
                 });
             }
         ).catch(
