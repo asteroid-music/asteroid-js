@@ -1,0 +1,69 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SideBar /> basic rendering renders correctly 1`] = `
+<Material UI Drawer
+  onClose={[Function]}
+  open={true}
+>
+  <Material UI Typography
+    align="center"
+    variant="h5"
+  >
+    openTab
+  </Material UI Typography>
+  <Material UI List
+    style={
+      Object {
+        "minWidth": "20vw",
+      }
+    }
+  >
+    <Material UI ListItem
+      button={true}
+      component={
+        Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "displayName": "Link",
+          "propTypes": Object {
+            "innerRef": [Function],
+            "onClick": [Function],
+            "replace": [Function],
+            "target": [Function],
+            "to": [Function],
+          },
+          "render": [Function],
+        }
+      }
+      onClick={[Function]}
+      to="/openTab/link1"
+    >
+      <Material UI ListItemText
+        primary="link1"
+      />
+    </Material UI ListItem>
+    <Material UI ListItem
+      button={true}
+      component={
+        Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "displayName": "Link",
+          "propTypes": Object {
+            "innerRef": [Function],
+            "onClick": [Function],
+            "replace": [Function],
+            "target": [Function],
+            "to": [Function],
+          },
+          "render": [Function],
+        }
+      }
+      onClick={[Function]}
+      to="/openTab/link2"
+    >
+      <Material UI ListItemText
+        primary="link2"
+      />
+    </Material UI ListItem>
+  </Material UI List>
+</Material UI Drawer>
+`;

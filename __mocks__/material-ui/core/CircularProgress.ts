@@ -1,0 +1,1 @@
+export default "Material UI CircularProgress";

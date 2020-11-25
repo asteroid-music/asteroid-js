@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TopBar /> renders correctly 1`] = `
+<Material UI AppBar
+  position="static"
+>
+  <Material UI Tabs
+    onChange={[Function]}
+    scrollButtons="on"
+    value={false}
+    variant="scrollable"
+  >
+    <button
+      onClick={[Function]}
+    >
+      Material UI Tab with props:
+      Object {
+  "label": "TestTab",
+  "value": "TestTab",
+}
+    </button>
+  </Material UI Tabs>
+  <Material UI Drawer
+    onClose={[Function]}
+    open={false}
+  >
+    <Material UI Typography
+      align="center"
+      variant="h5"
+    >
+      
+    </Material UI Typography>
+    <Material UI List
+      style={
+        Object {
+          "minWidth": "20vw",
+        }
+      }
+    />
+  </Material UI Drawer>
+</Material UI AppBar>
+`;

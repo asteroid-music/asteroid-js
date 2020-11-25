@@ -1,0 +1,351 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SongItem /> basic rendering renders correctly with a voteful song 1`] = `
+<Material UI ListItem>
+  <Material UI ListItemText
+    primary="This is a test song name"
+    primaryTypographyProps={
+      Object {
+        "noWrap": true,
+      }
+    }
+    secondary="This is a test artist name - This is a test album name - 9:16"
+    secondaryTypographyProps={
+      Object {
+        "noWrap": true,
+      }
+    }
+  />
+  <Material UI Typography>
+    3
+  </Material UI Typography>
+  <button
+    onClick={[Function]}
+  >
+    Material UI IconButton with props:
+    Object {
+  "children": &lt;Memo(UnfoldMoreIcon) /&gt;,
+  "onClick": [Function],
+}
+  </button>
+</Material UI ListItem>
+`;
+
+exports[`<SongItem /> basic rendering renders correctly with a voteless song 1`] = `
+<Material UI ListItem>
+  <Material UI ListItemText
+    primary="This is a test song name"
+    primaryTypographyProps={
+      Object {
+        "noWrap": true,
+      }
+    }
+    secondary="This is a test artist name - This is a test album name - 9:16"
+    secondaryTypographyProps={
+      Object {
+        "noWrap": true,
+      }
+    }
+  />
+  <button
+    onClick={[Function]}
+  >
+    Material UI IconButton with props:
+    Object {
+  "children": &lt;Memo(UnfoldMoreIcon) /&gt;,
+  "onClick": [Function],
+}
+  </button>
+</Material UI ListItem>
+`;
+
+exports[`<SongItem /> interaction: voting decreases the number of votes by one when the downvote button is hit and POST request is successful 1`] = `
+<Material UI ListItem>
+  <Material UI ListItemText
+    primary="This is a test song name"
+    primaryTypographyProps={
+      Object {
+        "noWrap": true,
+      }
+    }
+    secondary="This is a test artist name - This is a test album name - 9:16"
+    secondaryTypographyProps={
+      Object {
+        "noWrap": true,
+      }
+    }
+  />
+  <button
+    onClick={[Function]}
+  >
+    Material UI IconButton with props:
+    Object {
+  "children": &lt;Memo(ArrowUpwardIcon)
+    style={
+      Object {
+        "color": "#4caf50",
+      }
+    }
+  /&gt;,
+  "onClick": [Function],
+  "style": Object {},
+}
+  </button>
+  <Material UI Typography>
+    2
+  </Material UI Typography>
+  <button
+    onClick={[Function]}
+  >
+    Material UI IconButton with props:
+    Object {
+  "children": &lt;Memo(ArrowDownwardIcon)
+    style={
+      Object {
+        "color": "#f44336",
+      }
+    }
+  /&gt;,
+  "onClick": [Function],
+  "style": Object {
+    "backgroundColor": "#ffcdd2",
+  },
+}
+  </button>
+  <button
+    onClick={[Function]}
+  >
+    Material UI IconButton with props:
+    Object {
+  "children": &lt;Memo(UnfoldMoreIcon) /&gt;,
+  "onClick": [Function],
+}
+  </button>
+</Material UI ListItem>
+`;
+
+exports[`<SongItem /> interaction: voting increases the number of votes by one when the upvote button is hit and POST request is successful 1`] = `
+<Material UI ListItem>
+  <Material UI ListItemText
+    primary="This is a test song name"
+    primaryTypographyProps={
+      Object {
+        "noWrap": true,
+      }
+    }
+    secondary="This is a test artist name - This is a test album name - 9:16"
+    secondaryTypographyProps={
+      Object {
+        "noWrap": true,
+      }
+    }
+  />
+  <button
+    onClick={[Function]}
+  >
+    Material UI IconButton with props:
+    Object {
+  "children": &lt;Memo(ArrowUpwardIcon)
+    style={
+      Object {
+        "color": "#4caf50",
+      }
+    }
+  /&gt;,
+  "onClick": [Function],
+  "style": Object {
+    "backgroundColor": "#c8e6c9",
+  },
+}
+  </button>
+  <Material UI Typography>
+    4
+  </Material UI Typography>
+  <button
+    onClick={[Function]}
+  >
+    Material UI IconButton with props:
+    Object {
+  "children": &lt;Memo(ArrowDownwardIcon)
+    style={
+      Object {
+        "color": "#f44336",
+      }
+    }
+  /&gt;,
+  "onClick": [Function],
+  "style": Object {},
+}
+  </button>
+  <button
+    onClick={[Function]}
+  >
+    Material UI IconButton with props:
+    Object {
+  "children": &lt;Memo(UnfoldMoreIcon) /&gt;,
+  "onClick": [Function],
+}
+  </button>
+</Material UI ListItem>
+`;
+
+exports[`<SongItem /> prop: unfolded renders correctly when unfolded by default 1`] = `
+<Material UI ListItem>
+  <Material UI ListItemText
+    primary="This is a test song name"
+    secondary={
+      <div>
+        <Material UI Typography>
+          Artist: 
+          This is a test artist name
+        </Material UI Typography>
+        <Material UI Typography>
+          Album: 
+          This is a test album name
+        </Material UI Typography>
+        <Material UI Typography>
+          Duration: 
+          9:16
+        </Material UI Typography>
+      </div>
+    }
+    secondaryTypographyProps={
+      Object {
+        "component": "div",
+      }
+    }
+  />
+  <button
+    onClick={[Function]}
+  >
+    Material UI IconButton with props:
+    Object {
+  "children": &lt;Memo(UnfoldLessIcon) /&gt;,
+  "onClick": [Function],
+}
+  </button>
+</Material UI ListItem>
+`;
+
+exports[`<SongItem /> prop: voteButtons renders correctly with a voteful song and vote buttons 1`] = `
+<Material UI ListItem>
+  <Material UI ListItemText
+    primary="This is a test song name"
+    primaryTypographyProps={
+      Object {
+        "noWrap": true,
+      }
+    }
+    secondary="This is a test artist name - This is a test album name - 9:16"
+    secondaryTypographyProps={
+      Object {
+        "noWrap": true,
+      }
+    }
+  />
+  <button
+    onClick={[Function]}
+  >
+    Material UI IconButton with props:
+    Object {
+  "children": &lt;Memo(ArrowUpwardIcon)
+    style={
+      Object {
+        "color": "#4caf50",
+      }
+    }
+  /&gt;,
+  "onClick": [Function],
+  "style": Object {},
+}
+  </button>
+  <Material UI Typography>
+    3
+  </Material UI Typography>
+  <button
+    onClick={[Function]}
+  >
+    Material UI IconButton with props:
+    Object {
+  "children": &lt;Memo(ArrowDownwardIcon)
+    style={
+      Object {
+        "color": "#f44336",
+      }
+    }
+  /&gt;,
+  "onClick": [Function],
+  "style": Object {},
+}
+  </button>
+  <button
+    onClick={[Function]}
+  >
+    Material UI IconButton with props:
+    Object {
+  "children": &lt;Memo(UnfoldMoreIcon) /&gt;,
+  "onClick": [Function],
+}
+  </button>
+</Material UI ListItem>
+`;
+
+exports[`<SongItem /> prop: voteButtons renders correctly with a voteless song and vote buttons 1`] = `
+<Material UI ListItem>
+  <Material UI ListItemText
+    primary="This is a test song name"
+    primaryTypographyProps={
+      Object {
+        "noWrap": true,
+      }
+    }
+    secondary="This is a test artist name - This is a test album name - 9:16"
+    secondaryTypographyProps={
+      Object {
+        "noWrap": true,
+      }
+    }
+  />
+  <button
+    onClick={[Function]}
+  >
+    Material UI IconButton with props:
+    Object {
+  "children": &lt;Memo(ArrowUpwardIcon)
+    style={
+      Object {
+        "color": "#4caf50",
+      }
+    }
+  /&gt;,
+  "onClick": [Function],
+  "style": Object {},
+}
+  </button>
+  <button
+    onClick={[Function]}
+  >
+    Material UI IconButton with props:
+    Object {
+  "children": &lt;Memo(ArrowDownwardIcon)
+    style={
+      Object {
+        "color": "#f44336",
+      }
+    }
+  /&gt;,
+  "onClick": [Function],
+  "style": Object {},
+}
+  </button>
+  <button
+    onClick={[Function]}
+  >
+    Material UI IconButton with props:
+    Object {
+  "children": &lt;Memo(UnfoldMoreIcon) /&gt;,
+  "onClick": [Function],
+}
+  </button>
+</Material UI ListItem>
+`;

@@ -20,12 +20,11 @@ import App from 'App';
  *  - NoMatchedTab
  */
 
-jest.mock("parts/TopBar", ()=>"TopBar");
-jest.mock("views/NoOpenTab", ()=>"NoOpenTab");
-jest.mock("views/NoMatchedTab", ()=>"NoMatchedTab");
-jest.mock("@material-ui/core/Box", ()=>"Material UI Box");
-
 import { TabArray } from 'utils/Tabs';
+
+jest.mock("parts/TopBar",()=>"AsteroidTopBar");
+jest.mock("views/NoOpenTab",()=>"NoOpenTab");
+jest.mock("views/NoMatchedTab",()=>"NoMatchedTab");
 
 const tabs = new TabArray([
     {

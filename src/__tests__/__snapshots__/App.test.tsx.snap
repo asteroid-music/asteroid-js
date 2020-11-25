@@ -4,7 +4,7 @@ exports[`<App /> basic rendering renders correctly 1`] = `
 <Material UI Box
   width="100%"
 >
-  <TopBar
+  <AsteroidTopBar
     tabs={
       TabArray {
         "tabs": Array [

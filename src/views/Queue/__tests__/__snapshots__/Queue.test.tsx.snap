@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Queue /> basic rendering renders correctly 1`] = `
+<Material UI Container>
+  <Material UI Typography>
+    Currently playing song: Unknown
+  </Material UI Typography>
+  <div>
+    <Material UI Typography>
+      Requesting queue data... 
+    </Material UI Typography>
+    <Material UI CircularProgress />
+  </div>
+</Material UI Container>
+`;

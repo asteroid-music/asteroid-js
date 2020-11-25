@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Credits /> basic rendering renders correctly 1`] = `
+<Material UI Container>
+  <Material UI Typography
+    variant="body1"
+  >
+    Asteroid built by 
+    <a
+      href="https://github.com/dustpancake"
+      target="_blank"
+    >
+      Fergus Baker
+    </a>
+     and 
+    <a
+      href="https://github.com/JR-Mitchell"
+      target="_blank"
+    >
+      JR Mitchell
+    </a>
+    <br />
+    GitHub repo at: 
+    <a
+      href="https://github.com/asteroid-music"
+      target="_blank"
+    >
+      asteroid-music
+    </a>
+  </Material UI Typography>
+</Material UI Container>
+`;

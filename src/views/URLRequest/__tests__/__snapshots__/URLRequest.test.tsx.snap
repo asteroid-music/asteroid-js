@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<URLRequest /> basic rendering renders correctly 1`] = `
+<Material UI Container>
+  <Material UI Typography
+    variant="body1"
+  >
+    Insert the URL to request here!
+  </Material UI Typography>
+  <Material UI TextField
+    id="filled-basic"
+    label="Input URL"
+    onChange={[Function]}
+    style={
+      Object {
+        "width": "100%",
+      }
+    }
+    value=""
+    variant="filled"
+  />
+  <button
+    onClick={[Function]}
+  >
+    Material UI Button with props:
+    Object {
+  "children": " Request ",
+  "onClick": [Function],
+}
+  </button>
+</Material UI Container>
+`;

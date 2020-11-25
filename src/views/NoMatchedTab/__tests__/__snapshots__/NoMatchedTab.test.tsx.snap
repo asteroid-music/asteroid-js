@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<NoMatchedTab /> basic rendering renders correctly 1`] = `
+<Material UI Container>
+  <Material UI Typography>
+    404: No page 
+    <code>
+      /IncorrectAddress
+    </code>
+     found!
+  </Material UI Typography>
+</Material UI Container>
+`;
