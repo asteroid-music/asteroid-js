@@ -5,16 +5,16 @@ import axios from 'utils/axios';
 import { serialize as serialise } from 'jest-snapshot/build/utils';
 //I know, UK vs US spelling...
 
-//Test SongInterface without votes
+//Test positive SongInterface without votes
 const testSongVoteless: SongInterface = {
     artist: "This is a test artist name",
     song: "This is a test song name",
     duration: 556,
     album: "This is a test album name",
-    id: 1,
+    _id: "aaaaaaa"
 }
 
-//Test SongInterface with votes
+//Test negative SongInterface with votes
 const testSongVoteful: SongInterface = {
     votes: 3,
     ...testSongVoteless
@@ -151,4 +151,3 @@ describe('<SongItem />',()=>{
         });
     });
 });
-

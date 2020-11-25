@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<App /> basic rendering renders correctly 1`] = `
+<Material UI Box
+  width="100%"
+>
+  <TopBar
+    tabs={
+      TabArray {
+        "tabs": Array [
+          TabObject {
+            "name": "Testing Tab 1",
+            "subtabs": Array [
+              SubTabObject {
+                "component": [Function],
+                "name": "Testing Subtab 1",
+              },
+              SubTabObject {
+                "component": [Function],
+                "name": "Testing Subtab 2",
+              },
+            ],
+          },
+          TabObject {
+            "name": "Testing Tab 2",
+            "subtabs": Array [
+              SubTabObject {
+                "component": [Function],
+                "name": "Testing Subtab 3",
+              },
+              SubTabObject {
+                "component": [Function],
+                "name": "Testing Subtab 3",
+              },
+            ],
+          },
+        ],
+      }
+    }
+  />
+  <NoOpenTab />
+</Material UI Box>
+`;
