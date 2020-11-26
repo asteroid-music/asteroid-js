@@ -22,39 +22,43 @@ interface AppProps {
 }
 
 function App(props: AppProps) {
-    return (
-        <HashRouter>
-            <Box width="100%">
-                <TopBar
-                    tabs={props.tabs}
-                 />
-                <Switch>
-                    <Route exact path="/">
-                        <NoOpenTab />
-                    </Route>
-                    {props.tabs.nameList().map((tabName)=>{
-                        return <Route path={"/"+tabName} key={tabName}>
-                            <Switch>
-                                {props.tabs.get(tabName)?.nameList().map((subTabName)=>{
-                                    return <Route
-                                        key={tabName+"/"+subTabName}
-                                        path={"/"+tabName+"/"+subTabName}
-                                        component={props.tabs.get(tabName).get(subTabName)?.component}
-                                    />
-                                })}
-                                <Route path="*">
-                                    <NoMatchedTab />
-                                </Route>
-                            </Switch>
+    if (props.tabs && props.tabs instanceof TabArray) {
+        return (
+            <HashRouter>
+                <Box width="100%">
+                    <TopBar
+                        tabs={props.tabs}
+                    />
+                    <Switch>
+                        <Route exact path="/">
+                            <NoOpenTab />
                         </Route>
-                    })}
-                    <Route path="*">
-                        <NoMatchedTab />
-                    </Route>
-                </Switch>
-            </Box>
-        </HashRouter>
-    );
+                        {props.tabs.nameList().map((tabName)=>{
+                            return <Route path={"/"+tabName} key={tabName}>
+                                <Switch>
+                                    {props.tabs.get(tabName)?.nameList().map((subTabName)=>{
+                                        return <Route
+                                            key={tabName+"/"+subTabName}
+                                            path={"/"+tabName+"/"+subTabName}
+                                            component={props.tabs.get(tabName).get(subTabName)?.component}
+                                        />
+                                    })}
+                                    <Route path="*">
+                                        <NoMatchedTab />
+                                    </Route>
+                                </Switch>
+                            </Route>
+                        })}
+                        <Route path="*">
+                            <NoMatchedTab />
+                        </Route>
+                    </Switch>
+                </Box>
+            </HashRouter>
+        );
+    } else {
+        throw Error("Unable to render the <App> component: invalid props. This is likely an issue with the server and not your browser.");
+    }
 }
 
 export default App;
