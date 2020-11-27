@@ -32,6 +32,32 @@ import SongItemState from './State';
  */
 class SongItem extends React.Component<SongItemProps,SongItemState> {
     constructor(props) {
+        let propsAreValid: boolean = true;
+        //Assert that the only props are 'song', 'voteButtons' and 'unfolded'
+        Object.keys(props).forEach(key=>{
+            if (key !== "song" && key !== "voteButtons" && key !== "unfolded") {
+                propsAreValid = false;
+            }
+        });
+        //Assert that the 'song' prop exists and includes the correct entries
+        if (props.song) {
+            //Assert that the only elements are 'artist', 'song', 'duration', 'album', '_id' and 'votes'
+            Object.keys(props.song).forEach(key=>{
+                if (!["artist","song","duration","album","_id","votes"].includes(key)) {
+                    propsAreValid = false;
+                }
+            });
+            //Assert that types are matched
+            propsAreValid = propsAreValid && (typeof props.song.artist === "string" || props.song.artist instanceof String);
+            propsAreValid = propsAreValid && (typeof props.song.song === "string" || props.song.song instanceof String);
+            propsAreValid = propsAreValid && (typeof props.song.album === "string" || props.song.album instanceof String);
+            propsAreValid = propsAreValid && (typeof props.song._id === "string" || props.song._id instanceof String);
+            propsAreValid = propsAreValid && (typeof props.song.duration === "number" || props.song.duration instanceof Number);
+            propsAreValid = propsAreValid && (!props.song.votes || (typeof props.song.votes === "number" || props.song.votes instanceof Number));
+        } else {propsAreValid = false;}
+        if(!propsAreValid) {
+            throw Error("Unable to render the <SongItem> component: invalid props. This is likely an issue with the server and not your browser.")
+        }
         super(props);
         this.state = {
             unfolded: this.props.unfolded,

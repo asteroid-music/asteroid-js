@@ -21,6 +21,7 @@
     "html-webpack-plugin": "^4.3.0",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^26.4.2",
+    "jest-mock-axios": "^4.2.1",
     "react-test-renderer": "^16.13.1",
     "ts-jest": "^26.4.1",
     "ts-loader": "^8.0.3",

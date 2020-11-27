@@ -59,6 +59,10 @@ exports[`<SongItem /> basic rendering renders correctly with a voteless song 1`]
 </Material UI ListItem>
 `;
 
+exports[`<SongItem /> basic rendering throws an error if the 'song' prop is not a valid SongItem 1`] = `"Unable to render the <SongItem> component: invalid props. This is likely an issue with the server and not your browser."`;
+
+exports[`<SongItem /> basic rendering throws an error with missing/invalid props 1`] = `"Unable to render the <SongItem> component: invalid props. This is likely an issue with the server and not your browser."`;
+
 exports[`<SongItem /> interaction: voting decreases the number of votes by one when the downvote button is hit and POST request is successful 1`] = `
 <Material UI ListItem>
   <Material UI ListItemText
