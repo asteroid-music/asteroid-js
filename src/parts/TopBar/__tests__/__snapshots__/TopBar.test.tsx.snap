@@ -1,42 +1,84 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<TopBar /> renders correctly 1`] = `
+exports[`<TopBar /> opens the correct sidebar when a tab button is pressed 1`] = `
 <Material UI AppBar
   position="static"
 >
-  <Material UI Tabs
-    onChange={[Function]}
-    scrollButtons="on"
-    value={false}
-    variant="scrollable"
-  >
+  <div>
+    Material UI Tabs with props:
+    Object {
+  "children": Array [
+    &lt;Tab
+      label="TestTab"
+      value="TestTab"
+    /&gt;,
+  ],
+  "onChange": [Function],
+  "scrollButtons": "on",
+  "value": false,
+  "variant": "scrollable",
+}
     <button
       onClick={[Function]}
     >
       Material UI Tab with props:
       Object {
   "label": "TestTab",
+  "onChange": [Function],
   "value": "TestTab",
 }
     </button>
-  </Material UI Tabs>
-  <Material UI Drawer
-    onClose={[Function]}
-    open={false}
-  >
-    <Material UI Typography
-      align="center"
-      variant="h5"
+  </div>
+  <AsteroidSideBar
+    closeCallback={[Function]}
+    linkNames={
+      Array [
+        "TestSubtab",
+        "TestSubtabTwo",
+        "TestSubtab3",
+        "TestSubtab-4",
+      ]
+    }
+    open={true}
+    tabName="TestTab"
+  />
+</Material UI AppBar>
+`;
+
+exports[`<TopBar /> renders correctly 1`] = `
+<Material UI AppBar
+  position="static"
+>
+  <div>
+    Material UI Tabs with props:
+    Object {
+  "children": Array [
+    &lt;Tab
+      label="TestTab"
+      value="TestTab"
+    /&gt;,
+  ],
+  "onChange": [Function],
+  "scrollButtons": "on",
+  "value": false,
+  "variant": "scrollable",
+}
+    <button
+      onClick={[Function]}
     >
-      
-    </Material UI Typography>
-    <Material UI List
-      style={
-        Object {
-          "minWidth": "20vw",
-        }
-      }
-    />
-  </Material UI Drawer>
+      Material UI Tab with props:
+      Object {
+  "label": "TestTab",
+  "onChange": [Function],
+  "value": "TestTab",
+}
+    </button>
+  </div>
+  <AsteroidSideBar
+    closeCallback={[Function]}
+    linkNames={Array []}
+    open={false}
+    tabName=""
+  />
 </Material UI AppBar>
 `;
